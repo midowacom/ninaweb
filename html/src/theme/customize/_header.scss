@@ -1,0 +1,32 @@
+#header{
+	.mw{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.search{
+		width: 450px;
+		display: flex;
+		border: 2px solid #eca41a;
+		padding-left: 15px;
+	}
+	.icon-search{
+		
+	}
+	.btn-seach{
+		background: #eca41a;
+		width: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+.header-cart,
+.header-hotline{
+	.detail{
+		margin-left: 15px;
+	}
+}
+.header-hotline{
+	margin-left: 20px;
+}

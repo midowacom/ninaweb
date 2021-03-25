@@ -1,0 +1,22 @@
+$normal-color: #000;
+$active-color: #eca41b;
+%base-button{
+	cursor: pointer;
+		background-color: $active-color;
+			color: $normal-color;
+			display: inline-block;
+			&:hover,&.uk-active{
+				background-color: $normal-color;
+				color: $active-color;
+			}
+}
+%base-button-reverse{
+	cursor: pointer;
+	background-color: $normal-color;
+	color: $active-color;
+	display: inline-block;
+			&:hover,&.uk-active{
+				background-color: $active-color;
+			color: $normal-color;
+			}
+}

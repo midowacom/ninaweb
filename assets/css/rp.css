@@ -1,0 +1,137 @@
+@media (max-width: 1230px){
+	.w-md-450{
+		max-width: 400px!important;
+	}
+	#topbar{
+		display: none;
+	}
+	#logo{
+		width: unset;
+		height: auto;
+	}
+	#logo img{
+		position: relative;
+		height: auto;
+	}
+	#addons{
+		display: none;
+	}
+	#header{
+		/* padding: 10px 0; */
+		height: unset;
+	}
+	#header .container{
+		justify-content: center;
+		padding: 0!important;
+	}
+	#header #logo{
+		width: 100%;
+		text-align:center;
+	}
+	#header #menu{
+		width: 100%;
+		background: #161010;
+	}
+	#header #menu .container{
+		justify-content:space-between!important;
+		padding: 0 15px!important;
+	}
+	.w290{
+		display: none;
+	}
+	#sliderindex{
+		width: 100%;
+		height: unset;
+		/* margin-left: -15px; */
+		/* margin-right: -15px; */
+	}
+	.menu-ul{
+		display: none!important;
+	}
+	.vertical-menu{
+		display: none;
+	}
+	#menu_responsive_btn{
+		display: block;
+	}
+	#menu .container{
+		    /* height: 45px; */
+		    justify-content: space-between;
+	}
+	.icon.bar:before{
+		color: #FFF;
+		font-size: 24px;
+		display: flex;
+		height: 45px;
+		align-items: center;
+	}
+	img{
+		max-width: 100%;
+		 height: auto; 
+	}
+}
+@media (max-width: 1025px){
+	#index-gioithieu .gioithieu{
+		width: 100%;
+		max-width: 800px!important;
+	}
+	#index-gioithieu .newsletter{
+		width: 100%!important;
+		max-width: 800px!important;
+	}
+	#index-gioithieu .container{
+		justify-content: center!important;
+	}
+	.w-md-450{
+		max-width: 100%!important;
+	}
+}
+@media(max-width:1001px){
+	.menu-res{display:block;}
+}
+@media(max-width:850px){
+	.news{width:100%;float:none!important;}
+
+}
+@media(max-width:769px){
+	.top-contact{flex-wrap:wrap;}
+	.left-pro-detail,.right-pro-detail,.top-contact .form-contact,.top-contact .article-contact{width: 100%!important;margin:0px;}
+	.left-pro-detail,.top-contact .article-contact{margin-bottom:30px;width: 100%!important;}
+}
+@media (max-width: 767px){
+	#header .container{
+		justify-content:center;
+	}
+	.listvideos{
+		display: none;
+	}
+	.video-main{
+		width: 100%;
+	}
+	#index-gioithieu .newsletter .newsletter-wrapper{
+		padding: 0!important;
+		border: 0!important;
+	}
+	#email-newsletter{
+		/* margin-bottom: 15px; */
+	}
+	[class*="col-"]{
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.row{
+		margin-left: -8px;
+		margin-right: -8px;
+	}
+}
+@media(max-width:440px){
+	.pic-news,.info-news{display:block;width:100%;float:none;text-align:center;margin:0px;}
+	.info-news{margin-top:15px;}
+	.top-contact .form-contact .button-contact .file-contact span b{max-width:105px;}
+}
+@media(max-width:369px){
+	.cart-pro-detail{flex-wrap:wrap;}
+	.cart-pro-detail a{width:100%;text-align:center;margin:0px!important;font-size:12px;}
+	.cart-pro-detail a:first-child{margin-bottom:5px!important;}
+	.cart-pro-detail a i{display:none;}
+}

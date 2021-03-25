@@ -1,0 +1,84 @@
+.product-item{
+	text-align: center;
+	margin-bottom: 30px;
+	font-weight: 500;
+	&__image{
+		position: relative;
+	}
+	&__mota{
+		font-size: 14px;
+		font-family: var(--font-light);
+		color: #bcbdbc;
+		margin:10px 0 5px 0;
+		height: 21px;
+	}
+	&:hover{
+		
+	}
+	h3{
+		font-family: var(--font-light);
+		font-size: 18px;
+
+		color: #303030;
+		font-weight: 500;
+		margin-bottom: 0;
+	}
+	.slick-slide{
+		justify-content: center;
+		display: flex!important;
+		flex-wrap: wrap;
+	}
+}
+.price-product{
+	margin: 5px 0;
+}
+.color_item{
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	margin: 0 auto;
+}
+.product-item__color-slide{
+	width: calc(100% - 30px);
+	margin: 0 auto;
+}
+.giaban-product{
+	font-family: var(--font-light);
+	font-size: 18px;
+	color: #303030;
+	margin:5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

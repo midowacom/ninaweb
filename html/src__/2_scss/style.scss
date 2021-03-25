@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+// 3. Base stuff
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/form',
+  'base/helpers';
+@import 
+'layout/newsletter',
+'layout/minibox',
+'layout/header',
+'layout/menu',
+'layout/footer';
+@import
+  'themes/default';
+@import
+ 'pages/cart',
+  'pages/product',
+  'pages/product_detail',
+  'pages/home';

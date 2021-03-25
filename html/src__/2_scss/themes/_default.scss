@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+:root{
+	--font-regular: muli-regular;
+	--font-bold: muli-bold;
+	--font-light: muli-light;
+	--font-medium: muli-medium;
+	--brand-color: #{$brand-color};
+	--topbar-color: #{$brand-color};
+	--title-main-font: muli-bold;
+	--font-menu: muli-bold;
+}
+
+.long-title{
+	background-color: #f5f5f5;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	h2{
+		display: inline-flex;
+		background-color: #1022ac;
+		height: 100%;
+		border-top-right-radius: 20px;
+		margin-bottom: 0;
+	}
+	span.title{
+		font-family: "samsung";
+		font-size: 22px;
+		color: #fff;
+		padding: 12px 30px;
+		border-top-right-radius: 20px;
+	}
+	.psi{
+		display: inline-flex;
+		align-items: center;
+		font-family: roboto-regular;
+		font-size: 15px;
+		color: #4c4c4c;
+		background-color: #fff;
+		   padding: 3px 7px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		cursor: pointer;
+		&:hover{
+			background-color: #1022ac;
+			color: #fff;
+		}
+	}
+}
+.wrap-title{
+	.title-main{
+		font-family: utm-helvetin;
+		font-size: 30px;
+		color: #034d92;
+		text-transform: uppercase;
+	}
+	.title-desc{
+		font-family: var(--font-regular);
+		font-size: 14px;
+		color: #727272;
+		display: block;
+		margin-bottom: 10px;
+		span{
+			max-width: 800px;
+			margin: 0 auto;
+			display: inline-block;
+		}
+	}
+	.title-bottom{
+		display: inline-block;
+		width: 144px;
+		height: 22px;
+		background: image("h2_bottom.png");
+		margin: 0 auto;
+		position: relative;
+	}
+}
+#index-dangkynhantin{
+	padding: 40px 0;
+	background: image("bg_newsletter.jpg");
+	background-size: cover;
+}
+
+.line-limit { overflow: hidden; text-overflow: ellipsis; white-space: normal; -webkit-box-orient: vertical; display: -webkit-box; }
+.line-limit.to-2 { -webkit-line-clamp: 2; }
+.line-limit.to-3 { -webkit-line-clamp: 3; }
+.line-limit.to-4 { -webkit-line-clamp: 4; }
+.line-limit.to-5 { -webkit-line-clamp: 5; }
+.line-limit.to-1 { -webkit-line-clamp: 1; }
+

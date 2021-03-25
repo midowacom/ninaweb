@@ -1,0 +1,22 @@
+#mdw-footer {
+	background: image("bg_footer.jpg");
+	position: relative;
+	color: #fff;/* font-weight: 600; */
+	font-size: 15px;
+	color: #ffffff;
+	.icon:before{
+	}
+	position: relative;
+	#footer-map{
+		height: 100%!important;
+		
+	}
+}
+.mdw-footer-content{
+	position: absolute;
+	top:0;
+	left :0;
+	width: 100%;
+	height: 100%;
+	padding: 40px 0;
+}

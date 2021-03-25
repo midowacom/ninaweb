@@ -1,0 +1,62 @@
+.grid-pro-detail{margin-bottom:50px;max-width: 100%;overflow: hidden;display: flex;justify-content: space-between;flex-wrap: wrap;}
+.left-pro-detail{position:relative;/* float:left; */width:40%;text-align:center;margin-right:2%;background:white;}
+.left-pro-detail .MagicZoom{border:1px solid #eee;padding:7px;border-radius:5px;}
+.right-pro-detail{width:calc(100% - 42%);/* float:left; */}
+.gallery-thumb-pro{position:relative;margin-top:10px;}
+.owl-thumb-pro{padding:0px 40px;}
+.thumb-pro-detail{display:block!important;border:1px solid #eee;padding:5px;border-radius:3px;cursor:pointer;}
+.thumb-pro-detail.mz-thumb.mz-thumb-selected{border-color:#cecfd2;}
+.thumb-pro-detail img{box-shadow:none!important;filter:brightness(100%)!important;border-bottom:0px!important;padding-bottom:0px!important;}
+.title-pro-detail{text-transform:capitalize;font-size:20px;display:block;font-weight:700;}
+.social-plugin-pro-detail{margin-bottom:1rem;margin-top:0px!important;}
+.desc-pro-detail{margin-bottom:1rem;}
+.attr-pro-detail{list-style:none;padding:0px;}
+.attr-pro-detail li{margin-bottom:0.5rem;}
+.attr-label-pro-detail{margin:0px 5px 0px 0px;}
+.attr-label-pro-detail.d-block{display:block;margin:0px 0px 5px 0px;}
+.attr-content-pro-detail{display:inline-block;margin-bottom:0px;}
+.price-new-pro-detail{font-weight:700;font-size: 18px;
+    color: #fd2027;}
+.price-old-pro-detail{font-weight:500;color:var(--color-gray);text-decoration:line-through;padding-left:10px;}
+.color-pro-detail{display:inline-block;vertical-align:top;position:relative;width:35px;height:30px;margin:0px 0px 3px 0px;border:1px solid transparent;}
+.size-pro-detail{border:1px solid #ccc;padding:3px 10px 4px 10px;display:inline-block;position:relative;}
+.size-pro-detail.active,.color-pro-detail.active{border-color:#e5101d;color:#e5101d;}
+.color-pro-detail.active:before,.size-pro-detail.active:before{content:'';position:absolute;width:100%;height:100%;top:0px;left:0px;bottom:0px;right:0px;margin:auto;z-index:1;background-image:url("../images/check-cart.png");background-repeat:no-repeat;background-position:bottom right;}
+.color-pro-detail input[type=radio],.size-pro-detail input[type=radio]{outline:none;position:absolute;cursor:pointer;width:100%;height:100%;-webkit-appearance:none;border:0px;top:0px;left:0px;}
+.quantity-pro-detail{width:100%;max-width:110px;line-height:normal;display:flex;align-items:center;justify-content:space-between;text-align:center;}
+.quantity-pro-detail span{line-height:25px;padding:0px;width:30px;height:30px;color:#5f5f5f;cursor:pointer;font-size:22px;border:1px solid #cccccc;}
+.quantity-pro-detail span.quantity-plus-pro-detail{border-left:0px;}
+.quantity-pro-detail span.quantity-minus-pro-detail{border-right:0px;}
+.quantity-pro-detail input{height:30px;border:1px solid #cccccc;width:calc(100% - 60px);text-align:center;font-size:14px;padding:5px;}
+.cart-pro-detail{margin-bottom:1rem;display:flex;align-items:stretch;justify-content:flex-start;}
+.cart-pro-detail a{width:auto;text-align:center;color:#fff;padding:8px 15px;text-transform:uppercase;border-radius:3px;}
+.cart-pro-detail a.addnow{cursor:pointer;margin-right:10px;background:#fd6e1d;background:-webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));background:-webkit-linear-gradient(top,#f59000,#fd6e1d);background:-moz-linear-gradient(top,#f59000,#fd6e1d);background:-ms-linear-gradient(top,#f59000,#fd6e1d);background:-o-linear-gradient(top,#f59000,#fd6e1d);}
+.cart-pro-detail a.buynow{
+	cursor:pointer;background-color:var(--green);}
+.cart-pro-detail a.buynow:hover{background-color:var(--danger);}
+.cart-pro-detail a i{vertical-align:top;margin-top:3px;margin-right:8px;}
+.tags-pro-detail{margin:1rem 0px 2rem 0px;}
+.tags-pro-detail a{float:left;font-size:12px;color:#fff;padding:5px 10px 7px 10px;margin-right:5px;margin-bottom:5px;background-color:var(--color-red);border-radius:3px;}
+.tags-pro-detail a:hover{background-color:var(--danger);}
+.tags-pro-detail a i{font-size:10px;float:left;margin:5px 5px 0px 0px;}
+.social-plugin{
+	display: flex;
+}
+.zalo-share-button{
+	margin-left: 10px;
+}
+.tabs-pro-detail{
+	width: 100%;
+	margin: 15px 0;
+}
+.ul-tabs-pro-detail{
+	list-style: none;
+	padding: 0;
+	li{
+font-family: var(--font-bold);
+color: #333;
+font-size: 20px;
+text-transform: uppercase;
+border-bottom: 1px solid #333;
+	}
+}

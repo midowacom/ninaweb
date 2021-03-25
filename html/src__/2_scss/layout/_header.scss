@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+#topbar{
+	background-color: #d31e2d;
+	height: 42px;
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	color: #fff;
+	font-size: 14px;
+	span{
+		line-height: 1;
+	}
+	.value{
+		font-family: var(--font-bold);
+		font-size: 16px;
+	}
+	.topbar-right{
+		display: flex;
+	}
+	img{
+		margin-right: 5px;
+	}
+}
+
+#header{
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	position: relative;
+	padding:8px 0;
+	&:before,&:after{
+		height: 8px;
+		width: 100%;
+		content: "";
+		display: block;
+		left: 0;
+		position: absolute;
+	}
+	&:before{
+		top:0;
+	}
+	&:after{
+		bottom:0;
+		transform: rotate(180deg);
+	}
+}
+#timkiem{
+	.d-form{
+		border: 2px solid #1022ac;
+		display: flex;
+		width: 290px;
+		border-radius: 5px;
+		outline: none;
+		box-shadow: none;
+	}
+	.submit-search{
+		background: #1022ac;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+	}
+	input[type=text]{
+		padding-left: 20px;
+	}
+}

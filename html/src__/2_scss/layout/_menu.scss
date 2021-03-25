@@ -1,0 +1,123 @@
+#menu{
+    height: 50px;
+    position: relative;
+    background: #1022ac;
+    display: flex;
+    align-items: center;
+    z-index: 12;
+    .slice{
+        display: block;
+        height: 19px;
+        width: 1px;
+        background: image("slice.png") center no-repeat;
+    }
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #logo{
+        width: 162px;
+        text-align: center;
+        height: 100%;
+        position: relative;
+        img{
+            position: absolute;
+            top: 10px;
+            left: 1px;
+        }
+    }
+}
+#menu .menu-ul{
+    height: 100%;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    justify-content: space-between;
+    padding: 0;
+}
+.menu-a{
+    display: flex;
+    align-items: center;
+
+    img{
+        margin-right: 5px;
+    }
+}
+li.menu{
+    font-family: roboto-regular;
+    font-size: 14px;
+    color: #fff;
+    flex: auto;
+    position: relative;
+}
+.menu-ul{
+    li.menu{
+    text-align: center;
+    > a > span:not(.mmtt){
+        height: 50px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        z-index: 2;
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    &.active,&:hover{
+        > a{
+            &:before{
+                // content: "";
+                // width: 100%;
+                // height: 61px;
+                // position: absolute;
+                // top: -6px;
+                // left: 0;
+                // background: url(../images/bg_active.png);
+                // background-size: 100% 61px;
+                // z-index: 1;
+            }
+        }
+    }
+}
+}
+.sub-nav-ul{
+    position: absolute;
+    top: 100%;
+    background-color: #1022ac;
+    list-style: none;
+    padding: 0;
+    display: none;
+    min-width: 220px;
+    box-shadow: 0 0 1px 0 #fff;
+    li.menu{
+        flex: auto;
+        text-align: left;
+        border-bottom: 1px solid #ffffff40;
+        > a{
+             padding: 10px 15px;
+             display: block;
+        }
+        &:hover{
+            > a{
+                background-color: #df0000;
+
+            }
+        }
+    }
+}
+.sub-nav-ul .sub-nav-ul{
+    left: 100%;
+    top: 0;
+    span.mmtt{
+        white-space: nowrap;
+    }
+}
+li.menu:hover > .sub-nav-ul{
+    display: block;
+}

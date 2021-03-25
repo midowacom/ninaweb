@@ -1,0 +1,15 @@
+{
+    "name": "hoangtu/addons",
+    "authors": [
+        {
+            "name": "vohoangtu0409",
+            "email": "9281384+hoangtucoding@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+		"psr-4": {
+			"Tuezy\\": ""
+		}
+	},
+    "require": {}
+}

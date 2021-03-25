@@ -1,0 +1,32 @@
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+}
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}

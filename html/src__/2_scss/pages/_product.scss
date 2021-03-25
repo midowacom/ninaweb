@@ -1,0 +1,104 @@
+.product-bds-item{
+	position: relative;
+	.overlay-item{
+		padding: 10px;
+		background-color: rgba(#000,0.6);
+		pointer-events: none;
+		opacity: 0;
+	}
+	.overlay-item-wrap{
+		border: 1px solid #efefef;
+		padding: 15px;
+		color: #fff;
+		height: 100%;
+		width: 100%;
+		font-size: 14px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+
+	}
+	h3{
+		font-family: roboto-bold;
+		font-size: 15px;
+		color: #fff;
+		font-weight: normal;
+	}
+	&:hover{
+		.overlay-item{
+			opacity: 0.8;
+		}
+	}
+}
+
+.product-item{
+	box-shadow: 0 0 0 1px #ccc;
+	position: relative;
+	margin-bottom: 15px;
+	.giagiam{
+		height: 36px;
+		width: 36px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #df0000;
+		color: #fff;
+		font-family: roboto-bold;
+		font-size: 12px;
+		position: absolute;
+		right: 10px;
+		top:10px;
+	}
+	.image{
+
+	}
+	.detail{
+		padding: 15px 10px;
+		background-color: #fafafa;
+		h3{
+			font-family: var(--font-bold);
+			font-size: 13px;
+			color: #2e2e2e;
+			text-transform: uppercase;
+			margin-bottom: 0;
+		}
+		.price{
+			height: 45px;
+			display: inline-flex;
+			align-items: flex-end;
+			flex-wrap: wrap;
+			.gia{
+				color: #ff0000;
+				font-family: var(--font-bold);
+				font-size: 15px;
+				line-height: 1;
+			}
+
+			.giacu{
+				color: #7b7b7b;
+				font-size: 14px;
+				font-family: roboto-light;
+				display: block;
+				width: 100%;
+				line-height: 1;
+			}
+		}
+	}
+}
+.btn-dathang{
+	color: #0052aa;
+	font-family: roboto-light;
+	font-size: 12px;
+	display: inline-flex;
+	border: 1px solid #0052aa;
+	border-radius: 10px;
+	padding: 3px 8px;
+	background-color: #fff;
+	cursor: pointer;
+	&:hover{
+		background-color: #0052aa;
+		color: #fff;
+	}
+	position: absolute;
+	right: 10px;
+}

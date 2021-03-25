@@ -1,0 +1,41 @@
+<?php
+define("_page_not_fount","Page not existed.");
+define("_update_success","Update failure.");
+define("_account_not_active","Your account've not been active yet");
+define("_login_email_100","Email reissued password from ");
+define("_account_did_active","Your account has been activated");
+define("_active_successful","Account activation is successful.");
+define("_captcha_incorect_retype","Incorrect code. Please re-enter the confirmation code.");
+define("_not_enter_account_name_yet","Don't enter your account name");
+define("_not_enter_password_yet","No password entered");
+define("_login_successful","Logged in successfully");
+define("_error_login_404","Username or password incorrect. Or your account has not been verified by the Webmaster");
+define("_err_password_match","Confirm password does not match");
+define("_err_login_100","An error occurred during the password reset process. Please contact us.");
+define("_err_login_101","Password successfully re-issued. Please check your email:");
+define("_err_login_email_01","Have not entered the email to register for an account");
+define("_err_login_existed_01","Username and email do not exist");
+define("_err_login_active_account_01","An error occurred during account activation. Please contact us.");
+define("_err_login_reg_fail_01", "Member registration failed. Please try again later.");
+define("_err_login_email_existed_01", "Email address already exists");
+define("_err_login_account_existed_01","Username available");
+
+
+define("sukienmoi","new event");
+define("thang","Month");
+define("goiychoban","Suggestions for you");
+define("dongia","Unit price");
+define("soluong","Quantity");
+define("cai","unit");
+define("batbuocnhap_hoten","Required to enter full name");
+define("chua_nhap_so_luong","No quantity entered yet");
+define("goiychoban","Suggestions for you");
+define("dongia","Unit Price");
+define("soluong","Quantity");
+define("cai","unit");
+define("batbuocnhap_hoten","Please input your fullname");
+define("chua_nhap_so_luong","Please input quantity");
+define("chietkhau","Discount");
+define("giam","Discount");
+define("dakichhoat","User had been active");
+define("user_delete_order_question","Are you sure to delete this order ?");

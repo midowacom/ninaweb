@@ -1,0 +1,17 @@
+
+
+.multi-iframe{
+	position: relative;
+	ul.multi-iframe-label{
+		position: absolute;
+		top: 30px;
+		list-style-type: none;
+		li{
+			@extend %base-button;
+			a{
+				display: block;
+				padding: 10px 20px;
+			}
+		}
+	}
+}

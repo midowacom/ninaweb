@@ -1,0 +1,28 @@
+$h3-title-news: 15px;
+.card-news-item{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding: 8px;
+	box-shadow: 0 0 10px 0 #ccc;
+	.image{
+		width: 160px;
+		height: 120px;
+	}
+	.detail{
+		flex: 1 0 0;
+		padding: 0 10px;
+	}
+	h3.title-news{
+		font-family: var(--font-bold);
+		font-size: $h3-title-news;
+		color: #111;
+		margin-bottom: 0;
+	}
+	.time-news{
+		font-size: 12px;
+		color: #888;
+	}
+}

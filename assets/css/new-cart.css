@@ -1,0 +1,24 @@
+.quanprice-item{
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+.quanprice-item:hover,.quanprice-item.selected{
+    background-color: #efefef;
+}
+.quanprice-value{
+
+}
+.quanprice-label{
+   cursor: pointer;
+}
+.quanprice-cursor{
+	cursor: pointer;
+	display: block;
+}
+.quanprice-options{
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'roboto-regular';
+}
