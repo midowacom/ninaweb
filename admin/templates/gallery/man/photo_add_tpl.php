@@ -124,7 +124,7 @@
 		                        <ul class="nav nav-tabs" id="custom-tabs-three-tab-lang" role="tablist">
 		                            <?php foreach($config['website']['lang'] as $k => $v) { ?>
 		                                <li class="nav-item">
-		                                    <a class="nav-link <?=($k=='vi')?'active':''?>" id="tabs-lang" data-toggle="pill" href="#tabs-lang-<?=$k?>-<?=$i?>" role="tab" aria-controls="tabs-lang-<?=$k?>-<?=$i?>" aria-selected="true"><?=$v?></a>
+		                                    <a class="nav-link <?=($k==$lang_default)?'active':''?>" id="tabs-lang" data-toggle="pill" href="#tabs-lang-<?=$k?>-<?=$i?>" role="tab" aria-controls="tabs-lang-<?=$k?>-<?=$i?>" aria-selected="true"><?=$v?></a>
 		                                </li>
 		                            <?php } ?>
 		                        </ul>
@@ -132,7 +132,7 @@
 		                    <div class="card-body">
 		                        <div class="tab-content" id="custom-tabs-three-tabContent-lang">
 		                            <?php foreach($config['website']['lang'] as $k => $v) { ?>
-		                                <div class="tab-pane fade show <?=($k=='vi')?'active':''?>" id="tabs-lang-<?=$k?>-<?=$i?>" role="tabpanel" aria-labelledby="tabs-lang">
+		                                <div class="tab-pane fade show <?=($k==$lang_default)?'active':''?>" id="tabs-lang-<?=$k?>-<?=$i?>" role="tabpanel" aria-labelledby="tabs-lang">
 		                                    <?php if(isset($config[$com][$type][$dfgallery][$val]['tieude_photo']) && $config[$com][$type][$dfgallery][$val]['tieude_photo'] == true) { ?>
 		                                        <div class="form-group">
 		                                            <label for="ten<?=$k?><?=$i?>">Tiêu đề (<?=$k?>):</label>

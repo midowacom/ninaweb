@@ -1056,17 +1056,14 @@ select.uk-form-width-xsmall { width: 75px; }
 /* ======================================================================== Component: Notification ========================================================================== */
 /* 1. Set position 2. Dimensions */
 .uk-notification { /* 1 */ position: fixed; top: 10px; left: 10px; z-index: 1040; /* 2 */ box-sizing: border-box; width: 350px; }
-/* Position modifiers
-========================================================================== */
+/* Position modifiers========================================================================== */
 .uk-notification-top-right, .uk-notification-bottom-right { left: auto; right: 10px; }
 .uk-notification-top-center, .uk-notification-bottom-center { left: 50%; margin-left: -175px; }
 .uk-notification-bottom-left, .uk-notification-bottom-right, .uk-notification-bottom-center { top: auto; bottom: 10px; }
-/* Responsiveness
-========================================================================== */
+/* Responsiveness========================================================================== */
 /* Phones portrait and smaller */
 @media (max-width: 639px) { .uk-notification { left: 10px; right: 10px; width: auto; margin: 0; } }
-/* Message
-========================================================================== */
+/* Message========================================================================== */
 .uk-notification-message { position: relative; padding: 15px; background: #f8f8f8; color: #666; font-size: 1.25rem; line-height: 1.4; cursor: pointer; }
 * + .uk-notification-message { margin-top: 10px; }
 /* Close Adopts `uk-close` ========================================================================== */
@@ -1485,8 +1482,7 @@ ul.uk-nav-sub { padding: 5px 0 5px 15px; }
 .uk-animation-reverse { animation-direction: reverse; animation-timing-function: ease-in; }
 /* Duration modifier ========================================================================== */
 .uk-animation-fast { animation-duration: 0.1s; }
-/* Toggle (Hover + Focus)
-========================================================================== */
+/* Toggle (Hover + Focus)========================================================================== */
 /* The toggle is triggered on touch devices using `:focus` and tabindex */
 .uk-animation-toggle:not(:hover):not(:focus) [class*='uk-animation-'] { animation-name: none; }
 /* 1. Prevent tab highlighting on iOS. */
@@ -2098,11 +2094,9 @@ iframe.uk-cover { pointer-events: none; }
 .uk-blend-saturation { mix-blend-mode: saturation; }
 .uk-blend-color { mix-blend-mode: color; }
 .uk-blend-luminosity { mix-blend-mode: luminosity; }
-/* Transform
-========================================================================== */
+/* Transform========================================================================== */
 .uk-transform-center { transform: translate(-50%, -50%); }
-/* Transform Origin
-========================================================================== */
+/* Transform Origin========================================================================== */
 .uk-transform-origin-top-left { transform-origin: 0 0; }
 .uk-transform-origin-top-center { transform-origin: 50% 0; }
 .uk-transform-origin-top-right { transform-origin: 100% 0; }

@@ -12,8 +12,8 @@ class Functions
 	function title_main($title,$desc=''){
 		$html ='<div class="wrap-title text-center">';
 		$html .='<div class="title-main"><span>'.$title.'</span></div>';
-		$html .= '<div class="title-bottom"></div>';		
-		if($desc){
+		// $html .= '<div class="title-bottom"></div>';		
+		if(!empty($desc)){
 			$html .= '<div class="title-desc"><span>'.$desc.'</span></div>';
 		}
 		$html .= '</div>';
@@ -63,11 +63,14 @@ class Functions
 		else if(array_search('index.php', $urls)) $urls = array_diff($urls, ["index.php"]);
 		if(in_array($url, $urls)) $this->redirect($config_base,301);
 	}
-	public function checkLang(&$lang,$default_lang='vi')
+	public function checkLang(&$lang,$default_lang=null)
 	{
 		$arr_lang = array('vi','en');
-		if(!in_array($lang, $arr_lang ))
+		if(!in_array($lang, $arr_lang ) && is_null($default_lang))
+			$lang = 'vi';
+		else if(in_array($default_lang, $arr_lang))
 			$lang = $default_lang;
+		else $lang = 'vi';
 	}
 	/* Check HTTP */
 	public function checkHTTP($http, $arrayDomain, &$config_base, $config_url)
@@ -1923,13 +1926,13 @@ class Functions
 				$data_photo2 = '';
 				$pic = $d->rawQueryOne("select count(id) as c from #_product_quanprice where id_product=? ",array($item['id']));
 				if(!empty($item['photo2'])){ 
-					$data_photo2 = THUMBS.'/250x240x1/'.UPLOAD_PRODUCT_L.$item['photo2'];
+					$data_photo2 = THUMBS.'/280x230x1/'.UPLOAD_PRODUCT_L.$item['photo2'];
 				}
 				?>
 				<div class="product-item default-hover " id="product-item-<?=$item["id"]?>">
 					<div class="product-item__image image" data-src='<?=$data_photo2?>'>
 						<a class="text-decoration-none" href="<?=$item[$sluglang]?>" title="<?=$item['ten'.$lang]?>">
-							<img onerror="this.src='<?=THUMBS?>/250x240x1/assets/images/noimage.png';" src="<?=THUMBS?>/250x240x2/<?=UPLOAD_PRODUCT_L.$item['photo']?>" alt="<?=$item['ten'.$lang]?>" class="img-fluid w-100"/>
+							<img onerror="this.src='<?=THUMBS?>/280x230x1/assets/images/noimage.png';" src="<?=THUMBS?>/280x230x2/<?=UPLOAD_PRODUCT_L.$item['photo']?>" alt="<?=$item['ten'.$lang]?>" class="img-fluid w-100"/>
 						</a>
 					</div>
 					
@@ -1937,14 +1940,6 @@ class Functions
 						<h3 class="title-product line-limit to-2">
 							<a class="inherit-text text-decoration-none" href="<?=$item[$sluglang]?>" title="<?=$item['ten'.$lang]?>"><?=$item['ten'.$lang]?></a>
 						</h3>
-						<div class="price">
-							<span class="gia"><?=$this->price($item['gia'])?></span>
-							<span class="mx-1">-</span>
-							<span class="giacu"><?=$this->price($item['giacu'])?></span>
-						</div>
-						<div class="text-center q-i">
-							<?=$pic['c']?> Size
-						</div>
 					</div>
 				</div>
 			<?php }
@@ -1966,6 +1961,7 @@ class Functions
 					return $this->get_product_item_batdongsan($item);
 					break;
 					case 'san-pham':
+					case 'product':
 					default:
 					return $this->get_product_item($item);
 					break;
@@ -1974,15 +1970,13 @@ class Functions
 			public function get_product_tpl($product,$type='san-pham'){
 				global $sluglang,$lang;
 				?>
-				<div class="gutters-10">
 					<div class="row product-row">
 						<?php foreach($product as $item2){ ?>
-							<div class="product-col col">
+							<div class="col-lg-3 col-md-4 col-sm-6 col-6">
 								<?=$this->get_product_item_by_type($item2,$type);?>
 							</div>
 						<?php } ?>
 					</div>
-				</div>
 			<?php }
 
 			public function get_product_tpl_mobile($product){

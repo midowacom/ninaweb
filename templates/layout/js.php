@@ -13,11 +13,6 @@
     'no_products_in_cart': '<?=khongtontaisanphamtronggiohang?>',
     'wards': '<?=phuongxa?>',
     'back_to_home': '<?=vetrangchu?>',
-    'no_color_choosen': '<?=no_color_choosen?>',
-    'no_size_choosen': '<?=no_size_choosen?>',
-    '_not_enough_items':'<?=_not_enough_items?>',
-    'add_card_success': '<?=add_card_success?>',
-    'chua_nhap_so_luong': '<?=chua_nhap_so_luong?>'
   };
 </script>
 

@@ -464,13 +464,13 @@ body { font-family: var(--font-regular); font-weight: normal; line-height: 1.5; 
 .long-title span.title { font-family: "samsung"; font-size: 22px; color: #fff; padding: 12px 30px; border-top-right-radius: 20px; }
 .long-title .psi { display: inline-flex; align-items: center; font-family: roboto-regular; font-size: 15px; color: #4c4c4c; background-color: #fff; padding: 3px 7px; border: 1px solid #ddd; border-radius: 10px; cursor: pointer; }
 .long-title .psi:hover { background-color: #1022ac; color: #fff; }
-.wrap-title .title-main { font-family: var(--title-main-font); font-size: 32px; color: #0b1111; text-transform: uppercase; }
+.wrap-title .title-main { font-family: Arial; font-size: 24px; color: #405f8f; font-weight: bold; }
 .wrap-title .title-desc { font-family: var(--font-regular); font-size: 14px; color: #727272; display: block; margin-bottom: 10px; }
 .wrap-title .title-desc span { max-width: 800px; margin: 0 auto; display: inline-block; }
 .wrap-title .title-bottom { display: inline-block; width: 95px; height: 15px; background: url("../images/h2_bottom.png"); margin: 0 auto; position: relative; }
 #topbar { background: #405f8f; padding: 5px 0; }
 #topbar .mxh_top a { display: inline-block; margin-left: 5px; }
-#header .mw { display: flex; justify-content: space-between; align-items: center; }
+#header .mw { display: flex; justify-content: space-between; align-items: flex-end; }
 #header .search { width: 450px; display: flex; border: 2px solid #eca41a; padding-left: 15px; }
 #header .btn-seach { background: #eca41a; width: 70px; display: flex; align-items: center; justify-content: center; }
 .header-cart .detail, .header-hotline .detail { margin-left: 15px; }
@@ -479,6 +479,11 @@ body { font-family: var(--font-regular); font-weight: normal; line-height: 1.5; 
 .mdw-copyright a { color: #fff; font-weight: bold; font-size: 13px; }
 .mdw-copyright .box-flex.wrap { padding: 10px 0; }
 .mdw-footer { background-color: #405f8f; font-size: 13px; color: #fff; padding-top: 40px; padding-bottom: 30px; text-align: center; }
+#about-us { padding-top: 55px; padding-bottom: 55px; }
+.mbb { margin-bottom: 55px; }
+body:not(.index) #topbar { display: none; }
+body:not(.index) #logo img { height: 60px; }
+body:not(.index) #header { box-shadow: 1px 1px 5px 1px #ccc; margin-bottom: 50px; }
 #mdw-newsletter { padding: 40px 0; background: url("../images/bg_newsletter.jpg"); background-size: cover; }
 #mdw-newsletter form { width: 100%; max-width: 615px; margin: 0 auto; text-align: center; }
 #mdw-newsletter form input[type=email], #mdw-newsletter form input[type=text] { width: 100%; height: 55px; border-radius: 3px; margin-bottom: 20px; padding-left: 15px; }
@@ -509,30 +514,24 @@ ul.uk-tab-label li.uk-active, ul.uk-tab-label li:hover { background-color: #f9a2
 .row-item.tieuchi a.xemthem { color: #eca41a; font-size: 14px; font-family: var(--font-regular); }
 #index-tieuchi { margin: 30px 0; }
 .product-col { max-width: calc(100% / 5); }
-.product-item { box-shadow: 0 0 0 1px #f2f2f2; position: relative; margin-bottom: 10px; }
-.product-item .giagiam { height: 36px; width: 36px; display: inline-flex; align-items: center; justify-content: center; background-color: #df0000; color: #fff; font-family: roboto-bold; font-size: 12px; position: absolute; right: 10px; top: 10px; }
-.product-item .detail { padding: 15px 10px; text-align: center; }
-.product-item .detail h3 { font-family: robotoc-bold; font-size: 14px; color: #333333; text-transform: uppercase; }
-.product-item .detail .price { display: flex; align-items: center; justify-content: center; }
-.product-item .detail .price .gia, .product-item .detail .price .giacu { color: #0b1111; font-family: var(--font-bold); font-size: 16px; line-height: 1; }
+.product-item { position: relative; margin-bottom: 15px; }
+.product-item .detail { padding: 8px 10px; text-align: center; }
+.product-item .detail h3 { font-family: Arial; font-size: 12px; color: #526c98; font-weight: bold; }
 .tabs-pro-detail .uk-tab li { font-family: var(--font-bold); }
 .grid-pro-detail { flex-wrap: wrap; justify-content: space-between; }
 .left-pro-detail { max-width: 500px; width: 100%; }
 .right-pro-detail { max-width: calc(100% - 600px); width: 100%; }
 .uk-product-thumb { padding: 3px; }
-#menu { position: relative; display: flex; align-items: center; z-index: 12; }
+#menu { position: relative; display: flex; align-items: center; z-index: 12; width: calc(100% - 250px); }
 #menu .container { height: 100%; display: flex; align-items: center; justify-content: space-between; }
 #menu #logo { width: 162px; text-align: center; height: 100%; position: relative; }
 #menu #logo img { position: absolute; top: 10px; left: 1px; }
-#menu .menu-ul { height: 100%; width: 100%; list-style-type: none; display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 0; justify-content: center; padding: 0; }
+#menu .menu-ul { height: 100%; width: 100%; list-style-type: none; display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 0; justify-content: space-between; padding: 0; }
 .menu-a { display: flex; align-items: center; }
 .menu-a img { margin-right: 5px; }
-li.menu { font-family: roboto-medium; font-size: 15px; color: #fff; position: relative; }
-li.menu:not(:last-child) { border-right: 1px solid #fff; }
+li.menu { font-family: Arial; font-size: 14px; color: #405f8f; position: relative; }
 .menu-ul li.menu { text-align: center; }
-.menu-ul li.menu > a > span:not(.mmtt) { height: 50px; display: flex; align-items: center; text-align: center; justify-content: center; z-index: 2; position: relative; text-transform: uppercase; padding-left: 20px; padding-right: 20px; }
-.menu-ul li.menu.active, .menu-ul li.menu:hover { background-color: #0b1111; }
-.menu-ul li.menu.active > a, .menu-ul li.menu:hover > a { color: #eca41a !important; }
+.menu-ul li.menu > a > span:not(.mmtt) { display: flex; align-items: center; text-align: center; justify-content: center; z-index: 2; position: relative; text-transform: uppercase; height: 60px; }
 .sub-nav-ul { position: absolute; left: 0; top: 100%; background-color: #eca41a; list-style: none; padding: 0; display: none; min-width: 220px; box-shadow: 0 0 1px 0 #fff; }
 .sub-nav-ul li.menu { flex: auto; text-align: left; border-bottom: 1px solid #ffffff40; }
 .sub-nav-ul li.menu > a { display: block; padding: 10px 0; padding-left: 15px; }

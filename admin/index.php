@@ -30,7 +30,7 @@ require_once LIBRARIES."config-type.php";
 /* Setting */
 $setting = $d->rawQueryOne("select * from #_setting limit 0,1");
 $optsetting = (isset($setting['options']) && $setting['options'] != '') ? json_decode($setting['options'],true) : null;
-$lang = 'vi';
+$lang = 'en';
 /* Requick */
 require_once LIBRARIES."requick.php";
 
@@ -49,7 +49,7 @@ if(!empty($size_libraries)){
 }
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">

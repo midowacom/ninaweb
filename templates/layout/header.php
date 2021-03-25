@@ -16,31 +16,20 @@
         <div id="menu">
             <div class="mw">
                 <ul class="menu-ul">
-                    <li class="menu <?php if($source=='index') echo 'active';?>">
-                        <a href="" class="inherit-text menu-a" title="TRANG CHỦ">
-                           <span>TRANG CHỦ</span>
-                       </a>
-                   </li>
-                   <li class="menu <?php if($com=='gioi-thieu') echo 'active';?>">
-                    <a href="gioi-thieu" class="inherit-text menu-a" title="GIỚI THIỆU">
-                       <span>GIỚI THIỆU</span>
+                   <li class="menu <?php if($com=='about-us') echo 'active';?>">
+                    <a href="about-us" class="inherit-text menu-a" title="About Us">
+                       <span>About Us</span>
                    </a>
                </li>
-               <li class="menu <?php if($com=='san-pham') echo 'active';?>">
-                <a href="san-pham" class="inherit-text menu-a" title="Sản Phẩm">
-                    <span>Sản Phẩm</span>
+ <?php if(!empty($index_product_list_menu)){ ?>
+    <?php foreach($index_product_list_menu as $list){
+$index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
+     ?>
+            <li class="menu <?php if($com=='san-pham' && $idl == $list[$sluglang]) echo 'active';?>">
+                <a href="<?=$list[$sluglang]?>" class="inherit-text menu-a" title="<?=$list["ten$lang"]?>">
+                    <span><?=$list["ten$lang"]?></span>
                 </a>
-                <?php if(!empty($index_product_list_menu)){ ?>
-                    <ul class="vertical-menu-content sub-nav-ul">
-                        <?php foreach($index_product_list_menu as $list){
-
-                         $index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
-                         ?>
-                         <li class="menu">
-                            <a href="<?=$list[$sluglang]?>" class="inherit-text" title="<?=$list["ten$lang"]?>">
-                                <span class="mmtt"><?=$list["ten$lang"]?></span>
-                            </a>
-                            <?php if(!empty($index_dichvu_cat_item)){ ?>
+                <?php if(!empty($index_dichvu_cat_item)){ ?>
                                 <ul class="vertical-menu-content sub-nav-ul">
                                     <?php foreach($index_dichvu_cat_item as $item){
                                      ?>
@@ -54,56 +43,22 @@
                                 <?php } ?>
                             </ul>
                         <?php } ?>
-
                     </li>
-                <?php } ?>
-            </ul>
-        <?php } ?>
+ <?php } ?> 
+ <?php } ?>              
+               
 
-    </li>
-
-    <li class="menu <?php if($com=='dich-vu') echo 'active';?>">
-        <a href="dich-vu" class="inherit-text menu-a" title="DỊCH VỤ">
-            <span>DỊCH VỤ</span>
-        </a>
-        <?php if(!empty($index_dichvu_menu)){ ?>
-            <ul class="vertical-menu-content sub-nav-ul">
-                <?php foreach($index_dichvu_menu as $list){ ?>
-                 <li class="menu">
-                    <a href="<?=$list[$sluglang]?>" class="inherit-text" title="<?=$list["ten$lang"]?>">
-                        <span class="mmtt"><?=$list["ten$lang"]?></span>
-                    </a>
-                </li>
-            <?php } ?>
-        </ul>
-    <?php } ?>
-
-</li>
-
-<li class="menu <?php if($com=='thuong-hieu') echo 'active';?>">
-    <a href="thuong-hieu" class="inherit-text menu-a" title="Thương Hiệu">
-        <span>Thương Hiệu</span>
+   
+<li class="menu <?php if($com=='gallery') echo 'active';?>">
+    <a href="gallery" class="inherit-text menu-a" title="Gallery">
+        <span>Gallery</span>
     </a>
 </li>
-
-
-<li class="menu <?php if($com=='chinh-sach') echo 'active';?>">
-    <a href="chinh-sach" class="inherit-text menu-a" title="Chính Sách">
-        <span>Chính Sách</span>
+<li class="menu <?php if($com=='contact') echo 'active';?>">
+    <a href="contact" class="inherit-text menu-a" title="Contact">
+        <span>Contact</span>
     </a>
 </li>
-
-<li class="menu <?php if($com=='tin-tuc') echo 'active';?>">
-    <a href="tin-tuc" class="inherit-text menu-a" title="TIN TỨC">
-        <span>TIN TỨC</span>
-    </a>
-</li>
-<li class="menu <?php if($com=='lien-he') echo 'active';?>">
-    <a href="lien-he" class="inherit-text menu-a" title="TLIÊN HỆ">
-        <span>LIÊN HỆ</span>
-    </a>
-</li>
-
 </ul>
 </div>
 </div>
@@ -203,4 +158,5 @@
 </li>
 
 </ul>
+</div>
 </div>

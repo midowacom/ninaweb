@@ -38,10 +38,11 @@
 }
 .wrap-title{
 	.title-main{
-		font-family: var(--title-main-font);
-		font-size: 32px;
-		color: #0b1111;
-		text-transform: uppercase;
+		font-family: Arial;
+		font-size: 24px;
+		color: #405f8f;
+		font-weight: bold;
+		// text-transform: uppercase;
 	}
 	.title-desc{
 		font-family: var(--font-regular);

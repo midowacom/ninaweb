@@ -77,7 +77,8 @@ $optsetting = (isset($setting['options']) && $setting['options'] != '') ? json_d
 if(isset($match['params']['lang']) && $match['params']['lang'] != '') $_SESSION['lang'] = $match['params']['lang'];
 else if(!isset($_SESSION['lang']) && !isset($match['params']['lang'])) $_SESSION['lang'] = $optsetting['lang_default'];
 $lang = $_SESSION['lang'];
-$func->checkLang($lang,'en');
+
+$func->checkLang($lang,'vi');
 /* Slug lang */
 $sluglang = 'tenkhongdau'.$lang;
 
@@ -90,9 +91,9 @@ require_once SOURCES."allpage.php";
 
 /* Tối ưu link */
 $requick = array(
-	array("tbl"=>"product_cat","field"=>"idc","source"=>"product","com"=>"san-pham","type"=>"san-pham"),
-	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"san-pham","type"=>"san-pham"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"san-pham","type"=>"san-pham",'menu'=>true),
+	array("tbl"=>"product_cat","field"=>"idc","source"=>"product","com"=>"product","type"=>"san-pham"),
+	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"product","type"=>"san-pham"),
+	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"product","type"=>"san-pham",'menu'=>true),
 
 	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"nong-san","type"=>"nong-san"),
 	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"nong-san","type"=>"nong-san",'menu'=>true),
@@ -154,19 +155,20 @@ switch($com)
 	$template = "thietkeao/index";
 	$title_crumb = thietkeao;
 	break;
-	case 'lien-he':
-	$source = "contact";
-	$template = "contact/contact";
-	$seo->setSeo('type','object');
-	$title_crumb = lienhe;
-	break;
-
-	case 'gioi-thieu':
+	case 'about-us':
 	$source = "static";
 	$template = "static/static";
 	$type = $com;
 	$seo->setSeo('type','article');
-	$title_crumb = gioithieu;
+	
+	$title_crumb = "About Us";
+	break;
+
+	case 'contact':
+	$source = "contact";
+	$template = "contact/contact";
+	$seo->setSeo('type','object');
+	$title_crumb = "Contact";
 	break;
 
 	case 'tin-tuc':
@@ -294,12 +296,12 @@ switch($com)
 	$title_crumb = tacphamnhathietke;
 	break;
 
-	case 'san-pham':
+	case 'product':
 	$source = "product";
-	$template = isset($_GET['id']) ? "product/product_detail" : "product/product";
+	$template = isset($_GET['id']) ? "product/product_detail" : "product/simple_product";
 	$seo->setSeo('type',isset($_GET['id']) ? "article" : "object");
-	$type = $com;
-	$title_crumb = sanpham;
+	$type = 'san-pham';
+	$title_crumb = "Products";
 	break;
 
 	case 'nong-san':

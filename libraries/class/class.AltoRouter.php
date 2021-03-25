@@ -297,7 +297,6 @@ class AltoRouter
                 $route = str_replace($block, $pattern, $route);
             }
         }
-        if(is_array($route)) $route = implode($router,'');
         return "`^".@$route."$`u";
     }
 }

@@ -43,38 +43,38 @@
     $config['product'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
     $config['product'][$nametype]['gallery'] = array
     (
-        $nametype => array
-        (
-            "title_main_photo" => "Hình ảnh sản phẩm",
-            "title_sub_photo" => "Hình ảnh",
-            "number_photo" => 1,
-            "images_photo" => true,
-            "cart_photo" => true,
-            "avatar_photo" => true,
-            "tieude_photo" => true,
-            "width_photo" => 540,
-            "height_photo" => 540,
-            "thumb_photo" => '100x100x1',
-            "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
-        ),
-        "video" => array
-        (
-            "title_main_photo" => "Video sản phẩm",
-            "title_sub_photo" => "Video",
-            "number_photo" => 2,
-            "video_photo" => true,
-            "tieude_photo" => true
-        ),
+        // $nametype => array
+        // (
+        //     "title_main_photo" => "Hình ảnh sản phẩm",
+        //     "title_sub_photo" => "Hình ảnh",
+        //     "number_photo" => 1,
+        //     "images_photo" => true,
+        //     "cart_photo" => true,
+        //     "avatar_photo" => true,
+        //     "tieude_photo" => true,
+        //     "width_photo" => 540,
+        //     "height_photo" => 540,
+        //     "thumb_photo" => '100x100x1',
+        //     "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
+        // ),
+        // "video" => array
+        // (
+        //     "title_main_photo" => "Video sản phẩm",
+        //     "title_sub_photo" => "Video",
+        //     "number_photo" => 2,
+        //     "video_photo" => true,
+        //     "tieude_photo" => true
+        // ),
        
-        "taptin" => array
-        (
-            "title_main_photo" => "Tập tin sản phẩm",
-            "title_sub_photo" => "Tập tin",
-            "number_photo" => 2,
-            "file_photo" => true,
-            "tieude_photo" => true,
-            "file_type_photo" => 'doc|docx|pdf|rar|zip|ppt|pptx|DOC|DOCX|PDF|RAR|ZIP|PPT|PPTX|xls|jpg|png|gif|JPG|PNG|GIF|xls|XLS'
-        )
+        // "taptin" => array
+        // (
+        //     "title_main_photo" => "Tập tin sản phẩm",
+        //     "title_sub_photo" => "Tập tin",
+        //     "number_photo" => 2,
+        //     "file_photo" => true,
+        //     "tieude_photo" => true,
+        //     "file_type_photo" => 'doc|docx|pdf|rar|zip|ppt|pptx|DOC|DOCX|PDF|RAR|ZIP|PPT|PPTX|xls|jpg|png|gif|JPG|PNG|GIF|xls|XLS'
+        // )
     );
 
     /* Sản phẩm (Màu) */
@@ -89,33 +89,33 @@
 
     /* Sản phẩm (List) */
     $config['product'][$nametype]['title_main_list'] = "Sản phẩm cấp 1";
-    $config['product'][$nametype]['images_list'] = true;
-    $config['product'][$nametype]['show_images_list'] = true;
+    $config['product'][$nametype]['images_list'] = false;
+    $config['product'][$nametype]['show_images_list'] = false;
     $config['product'][$nametype]['slug_list'] = true;
     $config['product'][$nametype]['check_list'] = array("noibat" => "Nổi bật","noibat1" => "menu");
     $config['product'][$nametype]['gallery_list'] = array
     (
-        $nametype => array
-        (
-            "title_main_photo" => "Hình ảnh sản phẩm cấp 1",
-            "title_sub_photo" => "Hình ảnh Màu Sắc",
-            "number_photo" => 2,
-            "images_photo" => true,
-            "avatar_photo" => true,
-            "tieude_photo" => true,
-            "width_photo" => 300,
-            "height_photo" => 200,
-            "thumb_photo" => '100x100x1',
-            "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF',
-        ),
-        "video" => array
-        (
-            "title_main_photo" => "Video sản phẩm cấp 1",
-            "title_sub_photo" => "Video",
-            "number_photo" => 2,
-            "video_photo" => true,
-            "tieude_photo" => true
-        )
+        // $nametype => array
+        // (
+        //     "title_main_photo" => "Hình ảnh sản phẩm cấp 1",
+        //     "title_sub_photo" => "Hình ảnh Màu Sắc",
+        //     "number_photo" => 2,
+        //     "images_photo" => true,
+        //     "avatar_photo" => true,
+        //     "tieude_photo" => true,
+        //     "width_photo" => 300,
+        //     "height_photo" => 200,
+        //     "thumb_photo" => '100x100x1',
+        //     "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF',
+        // ),
+        // "video" => array
+        // (
+        //     "title_main_photo" => "Video sản phẩm cấp 1",
+        //     "title_sub_photo" => "Video",
+        //     "number_photo" => 2,
+        //     "video_photo" => true,
+        //     "tieude_photo" => true
+        // )
     );
     $config['product'][$nametype]['mota_list'] = true;
     $config['product'][$nametype]['seo_list'] = true;

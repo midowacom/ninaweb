@@ -103,16 +103,16 @@
                                 </td>
                                 <?php if(isset($config['news'][$type]['show_images']) && $config['news'][$type]['show_images'] == true) { ?>
                                     <td class="align-middle">
-                                    	<a href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['tenvi']?>"><img class="rounded img-preview" onerror="src='assets/images/noimage.png'" src="<?=THUMBS?>/<?=$config['news'][$type]['thumb']?>/<?=UPLOAD_NEWS_L.$items[$i]['photo']?>" alt="<?=$items[$i]['tenvi']?>"></a>
+                                    	<a href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['ten'.$lang_default]?>"><img class="rounded img-preview" onerror="src='assets/images/noimage.png'" src="<?=THUMBS?>/<?=$config['news'][$type]['thumb']?>/<?=UPLOAD_NEWS_L.$items[$i]['photo']?>" alt="<?=$items[$i]['ten'.$lang_default]?>"></a>
                                     </td>
                                 <?php } ?>
                                 <td class="align-middle">
-                                    <a class="text-dark" href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['tenvi']?>"><?=$items[$i]['tenvi']?></a>
+                                    <a class="text-dark" href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['ten'.$lang_default]?>"><?=$items[$i]['ten'.$lang_default]?></a>
                                     <div class="tool-action mt-2 w-clear">
                                     	<?php if(isset($config['news'][$type]['view']) && $config['news'][$type]['view'] == true) { ?>
-                                    		<a class="text-primary mr-3" href="<?=$linkView?><?=$items[$i]['tenkhongdauvi']?>" target="_blank" title="<?=$items[$i]['tenvi']?>"><i class="far fa-eye mr-1"></i>View</a>
+                                    		<a class="text-primary mr-3" href="<?=$linkView?><?=$items[$i]['tenkhongdauvi']?>" target="_blank" title="<?=$items[$i]['ten'.$lang_default]?>"><i class="far fa-eye mr-1"></i>View</a>
                                     	<?php } ?>
-                                    	<a class="text-info mr-3" href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['tenvi']?>"><i class="far fa-edit mr-1"></i>Edit</a>
+                                    	<a class="text-info mr-3" href="<?=$linkEdit?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['ten'.$lang_default]?>"><i class="far fa-edit mr-1"></i>Edit</a>
                                     	<?php if(isset($config['news'][$type]['copy']) && $config['news'][$type]['copy'] == true) { ?>
                                     		<div class="dropdown">
 			                            		<a id="dropdownCopy" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-success p-0 pr-3"><i class="far fa-clone mr-1"></i>Copy</a>
@@ -122,7 +122,7 @@
 									            </ul>
 			                            	</div>
                                     	<?php } ?>
-                                    	<a class="text-danger" id="delete-item" data-url="<?=$linkDelete?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['tenvi']?>"><i class="far fa-trash-alt mr-1"></i>Delete</a>
+                                    	<a class="text-danger" id="delete-item" data-url="<?=$linkDelete?><?=$linkID?>&id=<?=$items[$i]['id']?>" title="<?=$items[$i]['ten'.$lang_default]?>"><i class="far fa-trash-alt mr-1"></i>Delete</a>
                                     </div>
                                 </td>
                                 <?php if(isset($config['news'][$type]['gallery']) && count($config['news'][$type]['gallery']) > 0) { ?>

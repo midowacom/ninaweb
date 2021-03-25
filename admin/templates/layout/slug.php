@@ -22,7 +22,7 @@
                 <ul class="nav nav-tabs" id="custom-tabs-three-tab-lang" role="tablist">
                     <?php foreach($config['website']['slug'] as $k => $v) { ?>
                         <li class="nav-item">
-                            <a class="nav-link <?=($k=='vi')?'active':''?>" id="tabs-lang" data-toggle="pill" href="#tabs-sluglang-<?=$k?>" role="tab" aria-controls="tabs-sluglang-<?=$k?>" aria-selected="true"><?=$v?></a>
+                            <a class="nav-link <?=($k==$lang_default)?'active':''?>" id="tabs-lang" data-toggle="pill" href="#tabs-sluglang-<?=$k?>" role="tab" aria-controls="tabs-sluglang-<?=$k?>" aria-selected="true"><?=$v?></a>
                         </li>
                     <?php } ?>
                 </ul>
@@ -30,7 +30,7 @@
             <div class="card-body">
                 <div class="tab-content" id="custom-tabs-three-tabContent-lang">
                     <?php foreach($config['website']['slug'] as $k => $v) { ?>
-                        <div class="tab-pane fade show <?=($k=='vi')?'active':''?>" id="tabs-sluglang-<?=$k?>" role="tabpanel" aria-labelledby="tabs-lang">
+                        <div class="tab-pane fade show <?=($k==$lang_default)?'active':''?>" id="tabs-sluglang-<?=$k?>" role="tabpanel" aria-labelledby="tabs-lang">
                             <div class="form-gourp mb-0">
                                 <label class="d-block">Đường dẫn mẫu (<?=$k?>):<span class="pl-2 font-weight-normal" id="slugurlpreview<?=$k?>"><?=$config_base?><strong class="text-info"><?=@$item['tenkhongdau'.$k]?></strong></span></label>
                                 <input type="text" class="form-control slug-input no-validate" name="slug<?=$k?>" id="slug<?=$k?>" placeholder="Đường dẫn (<?=$k?>)" value="<?=@$item['tenkhongdau'.$k]?>">

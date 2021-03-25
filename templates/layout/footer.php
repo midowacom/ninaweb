@@ -6,13 +6,9 @@
   </div>
 </div>
 <div class="mdw-copyright">
-  <div class="mw wrap box-flex align-items-center justify-content-between">
-    <span class="mdw-copyright__left">2021 Copyright <a><?=$setting["ten$lang"]?></a>. Design by <a>Nina.vn</a></span>
-    <span class="mdw-copyright__right">
-      <span><?=dangonline?>: <?=$online?></span><span class="mx-2">|</span>
-      <span><?=trongtuan?>: <?=$counter['week']?></span><span class="mx-2">|</span>
-      <span><?=tongtruycap?>: <?=$counter['total']?></span>
-    </span>
+  <div class="mw wrap box-flex align-items-center justify-content-center">
+    <span class="mdw-copyright__left text-center">2021 Copyright <a><?=$setting["ten$lang"]?></a>. Design by <a>Nina.vn</a></span>
+  
   </div>
 </div>
 

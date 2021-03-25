@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 24, 2021 at 09:21 PM
+-- Generation Time: Mar 25, 2021 at 08:07 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.19
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nina`
+-- Database: `ninaweb`
 --
 
 -- --------------------------------------------------------
@@ -4104,7 +4104,14 @@ INSERT INTO `table_counter` (`id`, `tm`, `ip`) VALUES
 (10723, 1616615177, '127.0.0.1'),
 (10724, 1616618150, '127.0.0.1'),
 (10725, 1616619407, '127.0.0.1'),
-(10726, 1616620307, '127.0.0.1');
+(10726, 1616620307, '127.0.0.1'),
+(10727, 1616689189, '127.0.0.1'),
+(10728, 1616691301, '127.0.0.1'),
+(10729, 1616697492, '127.0.0.1'),
+(10730, 1616698632, '127.0.0.1'),
+(10731, 1616699871, '127.0.0.1'),
+(10732, 1616701262, '127.0.0.1'),
+(10733, 1616702182, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -6402,7 +6409,7 @@ CREATE TABLE `table_photo` (
 
 INSERT INTO `table_photo` (`id`, `noibat`, `photo`, `noidungen`, `noidungvi`, `motaen`, `motavi`, `tenen`, `tenvi`, `code`, `link`, `link_video`, `options`, `type`, `act`, `stt`, `hienthi`, `ngaytao`, `ngaysua`) VALUES
 (8, 0, 'banner-8126.png', '', '', '', '', '', '', NULL, '', '', NULL, 'banner', 'photo_static', 0, 1, 1585137325, 1616203076),
-(9, 0, 'logo-2616.png', '', '', '', '', '', '', NULL, '', '', '{\"p\":\"logo-2616.png\",\"w\":245,\"h\":82,\"m\":\"image\\/png\"}', 'logo', 'photo_static', 0, 1, 1585137336, 1616470408),
+(9, 0, 'logo-7402.png', '', '', '', '', '', '', NULL, '', '', '{\"p\":\"logo-7402.png\",\"w\":150,\"h\":100,\"m\":\"image\\/png\"}', 'logo', 'photo_static', 0, 1, 1585137336, 1616701655),
 (11, 0, 'watermark-7234.png', '', '', '', '', '', '', NULL, '', '', '{\"watermark\":{\"position\":\"1\",\"per\":\"5\",\"small_per\":\"5\",\"max\":\"80\",\"min\":\"50\"}}', 'watermark', 'photo_static', 0, 1, 1585137567, 1600260975),
 (13, 0, 'logo-7305.jpg', '', '', '', '', '', '', NULL, '', '', NULL, 'favicon', 'photo_static', 0, 1, 1585137591, 1592625842),
 (14, 0, 'popup-4515.jpg', '', '', '', '', 'Sneaker Shoes', 'Sneaker Shoes', NULL, 'https://www.google.com/', '', NULL, 'popup', 'photo_static', 0, 1, 1585137779, 1597500137),
@@ -6429,7 +6436,7 @@ INSERT INTO `table_photo` (`id`, `noibat`, `photo`, `noidungen`, `noidungvi`, `m
 (41, 0, 'fgg-3335.png', '', '', '', '', '', '', NULL, '', '', NULL, 'mangxahoi2', 'photo_multi', 2, 1, 0, 0),
 (42, 0, 'fing-1438.png', '', '', '', '', '', '', NULL, '', '', NULL, 'mangxahoi2', 'photo_multi', 3, 1, 0, 0),
 (43, 0, 'fins-3298.png', '', '', '', '', '', '', NULL, '', '', NULL, 'mangxahoi2', 'photo_multi', 4, 1, 0, 0),
-(45, 0, 'slider-7941.jpg', '', '', '', '', '', '', NULL, '', '', NULL, 'slide', 'photo_multi', 1, 1, 0, 0),
+(45, 0, 'slider-2872.jpg', '', '', '', '', '', '', NULL, '', '', NULL, 'slide', 'photo_multi', 1, 1, 0, 0),
 (53, 0, 'tw-6045.png', '', '', '', '', '', '', NULL, 'https://www.google.com/', '', NULL, 'mangxahoi', 'photo_multi', 3, 1, 0, 0),
 (52, 0, 'sv-2775.png', '', '', '', '', '', '', NULL, 'https://www.google.com/', '', NULL, 'mangxahoi', 'photo_multi', 2, 1, 0, 0),
 (51, 0, 'yt-9820.png', '', '', '', '', '', '', NULL, 'https://www.google.com/', '', NULL, 'mangxahoi', 'photo_multi', 1, 1, 0, 0),
@@ -6535,8 +6542,9 @@ INSERT INTO `table_product` (`id`, `id_list`, `id_item`, `id_cat`, `id_sub`, `id
 (256, 0, 0, 0, 0, '', '', '', '', 1, NULL, NULL, NULL, 'freeimg90621588freejpg850-8600.jpg', '', '', '', '', 'nong-san-01', '', '', '', '', '', '', 'Nông sản 01', '', 0, 0, 0, 1, 1, 'nong-sang', 1614938303, 0, 0, NULL),
 (257, 0, 0, 0, 0, '', '', '', '', 0, NULL, NULL, NULL, 'freeimg91433922freejpg850-4327.jpg', '', '', '', '{\"p\":\"freeimg91433922freejpg850-4327.jpg\",\"w\":850,\"h\":478,\"m\":\"image\\/jpeg\"}', 'nong-san-013', '', '', '', '', '', '', 'Nông sản 013', '', 0, 0, 0, 1, 1, 'nong-san', 1614938807, 0, 3, NULL),
 (258, 23, 0, 2, 0, '', '', '', '', 1, NULL, 1, 1, 'preview-watermark-7738.jpg', '', '', '', '{\"p\":\"preview-watermark-7738.jpg\",\"w\":500,\"h\":360,\"m\":\"image\\/jpeg\"}', 'abc-c-1-1-1-1-1-1-1-1', '', '', '', '', '', '', 'Abc c (1) (1) (1) (1) (1) (1) (1) (1)', '', 12000000, 0, 3000000, 0, 1, 'san-pham', 1615281983, 1616442843, 32, ''),
-(259, 23, 0, 2, 0, '', '9,8,7,6,5,4,10', '9,8,10,11,12', '', 1, 0, 0, 1, 'preview-watermark-7738-7873.jpg', '', '', '', '{\"p\":\"preview-watermark-7738-7873.jpg\",\"w\":500,\"h\":360,\"m\":\"image\\/jpeg\"}', 'abc-c-1-1-1-1-1-1-1-1-1', '', '', '', '', '', '', 'Sản phẩm teesst 01', '', 12000000, 0, 3000000, 0, 1, 'san-pham', 1616442847, 1616492666, 88, ''),
-(260, 0, 0, 0, 0, '', '9,8,7,5', '', '', 0, 0, 0, 0, '', '', '', '', '', 'abc', '', '', '', '', '', '', 'abc', '', 0, 0, 0, 1, 1, 'san-pham', 1616490613, 0, 0, '');
+(259, 24, 0, 0, 0, '', '9,8,7,6,5,4,10', '9,8,10,11,12', '', 1, 0, 0, 1, 'preview-watermark-7738-7873.jpg', '', '', '', '{\"p\":\"preview-watermark-7738-7873.jpg\",\"w\":500,\"h\":360,\"m\":\"image\\/jpeg\"}', 'abc-c-1-1-1-1-1-1-1-1-1', '', '', '', '', '', '', 'Sản phẩm teesst 01', '', 12000000, 0, 3000000, 0, 1, 'san-pham', 1616442847, 1616701995, 89, ''),
+(260, 0, 0, 0, 0, '', '9,8,7,5', '', '', 0, 0, 0, 0, '', '', '', '', '', 'abc', '', '', '', '', '', '', 'abc', '', 0, 0, 0, 1, 1, 'san-pham', 1616490613, 0, 0, ''),
+(261, 23, 0, 2, 0, '', '9,8,7,6', '9,8,10,11', '', 0, 0, 0, 0, '', '', '', '', '', '', 'haibara', '', '', '&lt;p&gt;aka&lt;/p&gt;\r\n', '', 'haibara', '', '', 0, 0, 0, 1, 1, 'san-pham', 1616698345, 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -6688,11 +6696,12 @@ CREATE TABLE `table_product_list` (
 INSERT INTO `table_product_list` (`id`, `noibat`, `noibat1`, `noibat2`, `noibat3`, `tenkhongdauvi`, `tenkhongdauen`, `noidungen`, `noidungvi`, `motaen`, `motavi`, `tenen`, `tenvi`, `photo`, `options`, `stt`, `hienthi`, `type`, `ngaytao`, `ngaysua`) VALUES
 (17, 0, NULL, NULL, NULL, 'ao', '', '', '', '', '', '', 'Áo', '', '', 1, 1, 'thiet-ke', 1610609007, 0),
 (18, 0, NULL, NULL, NULL, 'quan', '', '', '', '', '', '', 'Quần', '', '', 1, 1, 'thiet-ke', 1610609017, 0),
-(8, 1, 1, NULL, NULL, 'dien-tu', '', '', '', '', '', '', 'Điện tử', 'i2-4139.png', '{\"p\":\"i2-4139.png\",\"w\":24,\"h\":24,\"m\":\"image\\/png\"}', 3, 1, 'san-pham', 1585056131, 1615273757),
-(9, 1, 1, NULL, NULL, 'dien-gia-dung', '', '', '', '', '', '', 'Điện gia dụng', 'i3-8696.png', '{\"p\":\"i3-8696.png\",\"w\":24,\"h\":24,\"m\":\"image\\/png\"}', 4, 1, 'san-pham', 1585056142, 1615273748),
-(10, 1, 1, NULL, NULL, 'hang-khuyen-mai', '', '', '', '', '', '', 'Hàng khuyến mãi', 'i4-1890.png', '{\"p\":\"i4-1890.png\",\"w\":25,\"h\":24,\"m\":\"image\\/png\"}', 5, 1, 'san-pham', 1585056149, 1615273786),
-(20, 1, 1, NULL, NULL, 'dien-lanh', '', '', '', '', '', '', 'Điện lạnh', 'i1-9687.png', '{\"p\":\"\",\"w\":null,\"h\":null,\"m\":null}', 1, 1, 'san-pham', 1611550060, 1615273763),
-(23, 1, 1, 0, 0, 'linh-kien-phu-tung', '', '', '', '', '', '', 'Linh kiện phụ tùng', 'i5-7014.png', '{\"p\":\"i5-7014.png\",\"w\":25,\"h\":24,\"m\":\"image\\/png\"}', 1, 1, 'san-pham', 1615273808, 0),
+(24, 0, 1, 0, 0, 'new-products', '', '', '', '', 'abc', '', 'New Products', '', 'false', 1, 1, 'san-pham', 1616699582, 1616702429),
+(25, 0, 1, 0, 0, 'cubes', '', '', '', '', '', '', 'Cubes', '', 'false', 1, 1, 'san-pham', 1616699592, 0),
+(26, 0, 1, 0, 0, 'pavers', '', '', '', '', '', '', 'Pavers', '', 'false', 1, 1, 'san-pham', 1616699602, 0),
+(27, 0, 1, 0, 0, 'palisades', '', '', '', '', '', '', 'Palisades', '', 'false', 1, 1, 'san-pham', 1616699615, 0),
+(28, 0, 1, 0, 0, 'stairssteps', '', '', '', '', '', '', 'stairs/steps', '', 'false', 1, 1, 'san-pham', 1616699638, 0),
+(29, 0, 1, 0, 0, 'stepping-stone', '', '', '', '', '', '', 'Stepping Stone', '', 'false', 1, 1, 'san-pham', 1616699661, 0),
 (21, 1, 0, 0, 0, 'can-ban', '', '', '', '', '', '', 'Cần bán', '', '', 1, 1, 'bat-dong-san', 1614932925, 0),
 (22, 1, 0, 0, 0, 'cho-thue', '', '', '', '', '', '', 'Cho thuê', '', '', 1, 1, 'bat-dong-san', 1614932932, 0);
 
@@ -6964,9 +6973,8 @@ INSERT INTO `table_seo` (`id`, `idmuc`, `com`, `act`, `type`, `titlevi`, `keywor
 (152, 0, 'static', 'capnhat', 'gioi-thieu', '', '', '', '', '', ''),
 (132, 0, 'setting', 'capnhat', 'setting', '', '', '', '', '', ''),
 (151, 41, 'news', 'man', 'dich-vu', '', '', '', '', '', ''),
-(138, 10, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
-(135, 9, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
-(136, 8, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
+(172, 24, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
+(166, 25, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
 (19, 5, 'product', 'man', 'san-pham', '', '', '', '', '', ''),
 (23, 217, 'product', 'man', 'thiet-ke', '', '', '', '', '', ''),
 (20, 17, 'product', 'man_list', 'thiet-ke', '', '', '', '', '', ''),
@@ -6976,7 +6984,7 @@ INSERT INTO `table_seo` (`id`, `idmuc`, `com`, `act`, `type`, `titlevi`, `keywor
 (34, 1, 'product', 'man_brand', 'san-pham', '', '', '', '', '', ''),
 (35, 3, 'product', 'man_brand', 'san-pham', '', '', '', '', '', ''),
 (36, 2, 'product', 'man_brand', 'san-pham', '', '', '', '', '', ''),
-(137, 20, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
+(167, 26, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
 (78, 235, 'product', 'man', 'san-pham', '', '', '', '', '', ''),
 (130, 46, 'news', 'man', 'tieu-chi', '', '', '', '', '', ''),
 (131, 45, 'news', 'man', 'tieu-chi', '', '', '', '', '', ''),
@@ -7016,7 +7024,7 @@ INSERT INTO `table_seo` (`id`, `idmuc`, `com`, `act`, `type`, `titlevi`, `keywor
 (123, 248, 'product', 'man', 'bat-dong-san', '', '', '', '', '', ''),
 (124, 256, 'product', 'man', 'nong-sang', '', '', '', '', '', ''),
 (125, 257, 'product', 'man', 'nong-san', '', '', '', '', '', ''),
-(139, 23, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
+(168, 27, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
 (141, 1, 'product', 'man_item', 'san-pham', '', '', '', '', '', ''),
 (142, 2, 'product', 'man_item', 'san-pham', '', '', '', '', '', ''),
 (143, 3, 'product', 'man_item', 'san-pham', '', '', '', '', '', ''),
@@ -7027,9 +7035,12 @@ INSERT INTO `table_seo` (`id`, `idmuc`, `com`, `act`, `type`, `titlevi`, `keywor
 (148, 7, 'news', 'man_list', 'dich-vu', '', '', '', '', '', ''),
 (149, 83, 'news', 'man', 'dich-vu', '', '', '', '', '', ''),
 (155, 2, 'product', 'man_cat', 'san-pham', '', '', '', '', '', ''),
-(162, 259, 'product', 'man', 'san-pham', 'Abc c (1) (1) (1) (1) (1) (1) (1) (1) (1)', 'Abc c (1) (1) (1) (1) (1) (1) (1) (1) (1)', '', '', '', ''),
+(171, 259, 'product', 'man', 'san-pham', 'Abc c (1) (1) (1) (1) (1) (1) (1) (1) (1)', 'Abc c (1) (1) (1) (1) (1) (1) (1) (1) (1)', '', '', '', ''),
 (159, 260, 'product', 'man', 'san-pham', '', '', '', '', '', ''),
-(163, 85, 'news', 'man', 'cau-hoi', '', '', '', '', '', '');
+(163, 85, 'news', 'man', 'cau-hoi', '', '', '', '', '', ''),
+(164, 261, 'product', 'man', 'san-pham', '', '', '', '', '', ''),
+(169, 28, 'product', 'man_list', 'san-pham', '', '', '', '', '', ''),
+(170, 29, 'product', 'man_list', 'san-pham', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -27067,7 +27078,7 @@ CREATE TABLE `table_user` (
 --
 
 INSERT INTO `table_user` (`id`, `id_nhomquyen`, `username`, `password`, `maxacnhan`, `avatar`, `ten`, `dienthoai`, `email`, `diachi`, `gioitinh`, `login_session`, `user_token`, `lastlogin`, `hienthi`, `role`, `quyen`, `ngaysinh`, `stt`) VALUES
-(1, 0, 'admin', '79709a28906d1f7a08a0d067896ea1d5', '', '', '', '', '', '', 1, 'cdd5129f3ac2a705131260a4ab12a285', '310fbfd81c43e03fa948cc8507269007', '1616620065', 1, 3, 'cdd5129f3ac2a705131260a4ab12a285', 0, 0);
+(1, 0, 'admin', '79709a28906d1f7a08a0d067896ea1d5', '', '', '', '', '', '', 1, 'cdd5129f3ac2a705131260a4ab12a285', '4f404631a574d67da82bebf48af7b87c', '1616702446', 1, 3, 'cdd5129f3ac2a705131260a4ab12a285', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -27456,7 +27467,8 @@ INSERT INTO `table_user_log` (`id`, `id_user`, `ip`, `timelog`, `user_agent`) VA
 (343, 1, '127.0.0.1', 1616464892, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'),
 (344, 1, '127.0.0.1', 1616484036, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'),
 (345, 1, '127.0.0.1', 1616490453, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'),
-(346, 1, '127.0.0.1', 1616610257, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36');
+(346, 1, '127.0.0.1', 1616610257, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'),
+(347, 1, '127.0.0.1', 1616698015, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36');
 
 -- --------------------------------------------------------
 
@@ -27475,7 +27487,7 @@ CREATE TABLE `table_user_online` (
 --
 
 INSERT INTO `table_user_online` (`session`, `time`, `ip`) VALUES
-('vgf9taloh22tim326cpkm2485d', 1616620867, '127.0.0.1');
+('nn3mp04fi4pmcfj3teathfquac', 1616702847, '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -38490,7 +38502,7 @@ ALTER TABLE `table_contact`
 -- AUTO_INCREMENT for table `table_counter`
 --
 ALTER TABLE `table_counter`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10727;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10734;
 
 --
 -- AUTO_INCREMENT for table `table_design`
@@ -38664,7 +38676,7 @@ ALTER TABLE `table_photo`
 -- AUTO_INCREMENT for table `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=262;
 
 --
 -- AUTO_INCREMENT for table `table_product_brand`
@@ -38688,7 +38700,7 @@ ALTER TABLE `table_product_item`
 -- AUTO_INCREMENT for table `table_product_list`
 --
 ALTER TABLE `table_product_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `table_product_mau`
@@ -38736,7 +38748,7 @@ ALTER TABLE `table_pushonesignal`
 -- AUTO_INCREMENT for table `table_seo`
 --
 ALTER TABLE `table_seo`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=164;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 
 --
 -- AUTO_INCREMENT for table `table_seopage`
@@ -38790,7 +38802,7 @@ ALTER TABLE `table_user_limit`
 -- AUTO_INCREMENT for table `table_user_log`
 --
 ALTER TABLE `table_user_log`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=348;
 
 --
 -- AUTO_INCREMENT for table `table_wards`

@@ -99,7 +99,7 @@
 	else if($idl!='')
 	{
 		/* Lấy cấp 1 detail */
-		$pro_list = $d->rawQueryOne("select id, ten$lang, tenkhongdauvi, tenkhongdauen, type, photo, options from #_product_list where id = ? and type = ? limit 0,1",array($idl,$type));
+		$pro_list = $d->rawQueryOne("select id, ten$lang, tenkhongdauvi, tenkhongdauen, type, photo, options, motavi from #_product_list where id = ? and type = ? limit 0,1",array($idl,$type));
 			$_SESSION['goiy'] =(int) $pro_list['id'];
 		/* SEO */
 		$title_cat = $pro_list['ten'.$lang];

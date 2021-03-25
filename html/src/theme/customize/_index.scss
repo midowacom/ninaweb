@@ -1,3 +1,24 @@
+#about-us{
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+.mbb{
+	margin-bottom: 55px;
+}
+
+
+body:not(.index){
+	#topbar{
+		display: none;
+	}
+	#logo img{
+		height: 60px;
+	}
+	#header{
+		box-shadow: 1px 1px 5px 1px #ccc;
+		margin-bottom: 50px;
+	}
+}
 #mdw-newsletter{
 	padding: 40px 0;
 	background: image("bg_newsletter.jpg");

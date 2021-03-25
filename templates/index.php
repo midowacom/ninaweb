@@ -13,7 +13,7 @@
     if($source =='index'){
       include TEMPLATE."uikits/large_slider.php";
     }else{ 
-      include TEMPLATE.LAYOUT."breadcrumb.php";
+      // include TEMPLATE.LAYOUT."breadcrumb.php";
     }
 
     ?>

@@ -19,13 +19,8 @@ $emailer = new Email($d);
 $router = new AltoRouter();
 $cache = new FileCache($d);
 
-if(isset($detect)){
-    $deviceType = ($detect->isMobile() || $detect->isTablet()) ? 'mobile' : 'computer';
-    if($deviceType == 'computer') $func = new Functions($d);
-    else $func = new FunctionsMobile($d);
-}else{
-   $func = new Functions($d);
-}
+
+$func = new Functions($d);
 
 $breadcr = new BreadCrumbs($d);
 $statistic = new Statistic($d, $cache);
