@@ -32,7 +32,7 @@
 			'charset' => 'utf8'
 		),
 		'website' => array(
-			'error-reporting' => false,
+			'error-reporting' => true,
 			'secret' => '$nina@',
 			'salt' => 'swKJjeS!t',
 			'debug-developer' => true,
@@ -44,18 +44,18 @@
 				'max-height' => 1600
 			),
 			'lang' => array(
-				'vi'=>'Tiếng Việt',
-				// 'en'=>'Tiếng Anh'
+				// 'vi'=>'Tiếng Việt',
+				'en'=>'Tiếng Anh'
 			),
-			'lang-doc' => 'vi|en',
+			'lang-doc' => 'en',
 			// 'lang-doc' => 'vi',
 			'slug' => array(
-				'vi'=>'Tiếng Việt',
-				// 'en'=>'Tiếng Anh'
+				// 'vi'=>'Tiếng Việt',
+				'en'=>'Tiếng Anh'
 			),
 			'seo' => array(
-				'vi'=>'Tiếng Việt',
-				// 'en'=>'Tiếng Anh'
+				// 'vi'=>'Tiếng Việt',
+				'en'=>'Tiếng Anh'
 			),
 			'comlang' => array(
 				// "gioi-thieu" => array("vi"=>"gioi-thieu","en"=>"about-us"),
@@ -71,10 +71,10 @@
 			
 		),
 		'cart' => array(
-			'active' => true
+			'active' => false
 		),
 		'order' => array(
-			'active' => true,
+			'active' => false,
 			'ship' => false,
 			'excel' => false,
 			'word' => false,

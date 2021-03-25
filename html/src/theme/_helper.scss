@@ -16,18 +16,19 @@ body{
 	line-height: 1.5;
 }
 .wrap{
-	padding-left: 1rem;
-	padding-right: 1rem;
-	.wrap{
-		padding-left: 0;
-		padding-right: 0;
-	}
+	
 }
 .mw{
 	max-width: $maxwidth;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	.mw{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .box-flex{
 	display: flex;

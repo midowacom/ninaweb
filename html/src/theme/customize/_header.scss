@@ -1,3 +1,13 @@
+#topbar{
+	background: #405f8f;
+	padding: 5px 0;
+	.mxh_top{
+		a{
+			display: inline-block;
+			margin-left: 5px;
+		}
+	}
+}
 #header{
 	.mw{
 		display: flex;

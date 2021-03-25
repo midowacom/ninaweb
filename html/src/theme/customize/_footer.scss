@@ -1,39 +1,24 @@
 .mdw-copyright{
 	position: relative;
-	background: #000 image("copyright-border-top.png") top repeat-x;
+	// background: #000 image("copyright-border-top.png") top repeat-x;
+	background-color: #355079;
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
+	font-family: Arial;
+	a{
+		color: #fff;
+		font-weight: bold;
+		font-size: 13px;
+	}
 	.box-flex.wrap{
-		padding: 30px 0;
-		padding-top: 60px;
+		padding: 10px 0;
 	}
 }
 .mdw-footer{
-	background-color: #000;
+	background-color: #405f8f;
 	font-size: 13px;
 	color: #fff;
 	padding-top: 40px;
 	padding-bottom: 30px;
-	h3{
-		font-family: var(--font-bold);
-		font-size: 13px;
-		color: #fff;
-	}
-	
-	.ft-c-4{
-		max-width: 300px;
-		width: 100%;
-	}
-	.ft-c-3{
-		max-width: 210px;
-		width: 100%;
-	}
-	.ft-c-2{
-		max-width: 210px;
-		width: 100%;
-	}
-	.ft-c-1{
-		max-width: 400px;
-		width: 100%;
-	}
+	text-align: center;
 }

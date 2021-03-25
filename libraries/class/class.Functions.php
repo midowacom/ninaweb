@@ -63,7 +63,12 @@ class Functions
 		else if(array_search('index.php', $urls)) $urls = array_diff($urls, ["index.php"]);
 		if(in_array($url, $urls)) $this->redirect($config_base,301);
 	}
-
+	public function checkLang(&$lang,$default_lang='vi')
+	{
+		$arr_lang = array('vi','en');
+		if(!in_array($lang, $arr_lang ))
+			$lang = $default_lang;
+	}
 	/* Check HTTP */
 	public function checkHTTP($http, $arrayDomain, &$config_base, $config_url)
 	{

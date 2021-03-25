@@ -1,19 +1,19 @@
 <?php
 /* Banner */
-$nametype = "banner";
-$config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
-$config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 450;
-$config['photo']['photo_static'][$nametype]['height'] = 95;
-$config['photo']['photo_static'][$nametype]['thumb'] = '730x120x1';
-$config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
+// $nametype = "banner";
+// $config['photo']['photo_static'][$nametype]['title_main'] = "Banner";
+// $config['photo']['photo_static'][$nametype]['images'] = true;
+// $config['photo']['photo_static'][$nametype]['width'] = 450;
+// $config['photo']['photo_static'][$nametype]['height'] = 95;
+// $config['photo']['photo_static'][$nametype]['thumb'] = '730x120x1';
+// $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
 /* Logo */
 $nametype = "logo";
 $config['photo']['photo_static'][$nametype]['title_main'] = "Logo";
 $config['photo']['photo_static'][$nametype]['images'] = true;
-$config['photo']['photo_static'][$nametype]['width'] = 245;
-$config['photo']['photo_static'][$nametype]['height'] = 90;
+$config['photo']['photo_static'][$nametype]['width'] = 150;
+$config['photo']['photo_static'][$nametype]['height'] = 100;
 $config['photo']['photo_static'][$nametype]['thumb'] = '120x100x1';
 $config['photo']['photo_static'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
@@ -65,7 +65,7 @@ $config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
 $config['photo']['man_photo'][$nametype]['link_photo'] = true;
 $config['photo']['man_photo'][$nametype]['tieude_photo'] = true;
 $config['photo']['man_photo'][$nametype]['width_photo'] = 1440;
-$config['photo']['man_photo'][$nametype]['height_photo'] = (int)((545/1366)*1440);
+$config['photo']['man_photo'][$nametype]['height_photo'] = (int)((450/1366)*1440);
 $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
 $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 

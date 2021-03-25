@@ -1,8 +1,8 @@
 <div id="topbar">
     <div class="mw wrap d-flex justify-content-between">
-        <div class="topbar-left"><?=$slogan["noidung$lang"]?></div>
+        <div class="topbar-left"></div>
         <div class="topbar-right">
-     <span class="icon email"><?=$optsetting["email"]?></span>
+         <span class="mxh_top"><?=$func->get_mxh($social,30,30)?></span>
      </div>
  </div>
 </div>
@@ -10,98 +10,73 @@
     <div class="mw wrap">
         <div id="logo">
             <a href="index.php">
-                <img onerror="this.src='<?=THUMBS?>/245x90x1/assets/images/default/noimage.png';" src="<?=THUMBS?>/245x90x2/<?=UPLOAD_PHOTO_L.$logo['photo']?>" class="img-fluid"/>
+                <img onerror="this.src='<?=THUMBS?>/150x100x1/assets/images/default/noimage.png';" src="<?=THUMBS?>/150x100x2/<?=UPLOAD_PHOTO_L.$logo['photo']?>" class="img-fluid"/>
             </a>
         </div>
+        <div id="menu">
+            <div class="mw">
+                <ul class="menu-ul">
+                    <li class="menu <?php if($source=='index') echo 'active';?>">
+                        <a href="" class="inherit-text menu-a" title="TRANG CHỦ">
+                           <span>TRANG CHỦ</span>
+                       </a>
+                   </li>
+                   <li class="menu <?php if($com=='gioi-thieu') echo 'active';?>">
+                    <a href="gioi-thieu" class="inherit-text menu-a" title="GIỚI THIỆU">
+                       <span>GIỚI THIỆU</span>
+                   </a>
+               </li>
+               <li class="menu <?php if($com=='san-pham') echo 'active';?>">
+                <a href="san-pham" class="inherit-text menu-a" title="Sản Phẩm">
+                    <span>Sản Phẩm</span>
+                </a>
+                <?php if(!empty($index_product_list_menu)){ ?>
+                    <ul class="vertical-menu-content sub-nav-ul">
+                        <?php foreach($index_product_list_menu as $list){
 
-        <div id="banner">
-            <div class="search d-form">
-                <input type="text" id="keyword" placeholder="<?=nhaptukhoatimkiem?>" onkeypress="doEnter(event,'keyword');"/>
-                <span onclick="onSearch('keyword');" class="btn-seach"><span class="icon-search"><img src="assets/images/icon-search.png" alt=""></span></span>
-            </div>
-        </div>
-        <div id="addons" class="box-flex">
-            <a class="header-cart box-flex align-items-center text-decoration-none" href="gio-hang">
-                <img src="assets/images/icon-giohang.png">
-                <div class="detail">
-                    <div class="label">Giỏ hàng:</div>
-                    <div class="value">( <span class="count_cart"><?=count($_SESSION['cart'])?></span> ) sản phẩm</div>
-                </div>
-            </a>
-            <div class="header-hotline box-flex align-items-center">
-                <img src="assets/images/icon-hotro.png">
-                <div class="detail">
-                    <div class="label">Hotline:</div>
-                    <div class="value"><?=$optsetting["hotline"]?></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="menu">
-    <div class="mw">
-        <ul class="menu-ul">
-            <li class="menu <?php if($source=='index') echo 'active';?>">
-                <a href="" class="inherit-text menu-a" title="TRANG CHỦ">
-                   <span>TRANG CHỦ</span>
-               </a>
-           </li>
-           <li class="menu <?php if($com=='gioi-thieu') echo 'active';?>">
-            <a href="gioi-thieu" class="inherit-text menu-a" title="GIỚI THIỆU">
-               <span>GIỚI THIỆU</span>
-           </a>
-       </li>
-       <li class="menu <?php if($com=='san-pham') echo 'active';?>">
-        <a href="san-pham" class="inherit-text menu-a" title="Sản Phẩm">
-            <span>Sản Phẩm</span>
+                         $index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
+                         ?>
+                         <li class="menu">
+                            <a href="<?=$list[$sluglang]?>" class="inherit-text" title="<?=$list["ten$lang"]?>">
+                                <span class="mmtt"><?=$list["ten$lang"]?></span>
+                            </a>
+                            <?php if(!empty($index_dichvu_cat_item)){ ?>
+                                <ul class="vertical-menu-content sub-nav-ul">
+                                    <?php foreach($index_dichvu_cat_item as $item){
+                                     ?>
+                                     <li class="menu">
+                                        <a href="<?=$item[$sluglang]?>" class="inherit-text" title="<?=$item["ten$lang"]?>">
+                                            <span class="mmtt"><?=$item["ten$lang"]?></span>
+                                        </a>
+
+                                        
+                                    </li>
+                                <?php } ?>
+                            </ul>
+                        <?php } ?>
+
+                    </li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
+
+    </li>
+
+    <li class="menu <?php if($com=='dich-vu') echo 'active';?>">
+        <a href="dich-vu" class="inherit-text menu-a" title="DỊCH VỤ">
+            <span>DỊCH VỤ</span>
         </a>
-        <?php if(!empty($index_product_list_menu)){ ?>
+        <?php if(!empty($index_dichvu_menu)){ ?>
             <ul class="vertical-menu-content sub-nav-ul">
-                <?php foreach($index_product_list_menu as $list){
-
-                 $index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
-                 ?>
+                <?php foreach($index_dichvu_menu as $list){ ?>
                  <li class="menu">
                     <a href="<?=$list[$sluglang]?>" class="inherit-text" title="<?=$list["ten$lang"]?>">
                         <span class="mmtt"><?=$list["ten$lang"]?></span>
                     </a>
-                    <?php if(!empty($index_dichvu_cat_item)){ ?>
-                        <ul class="vertical-menu-content sub-nav-ul">
-                            <?php foreach($index_dichvu_cat_item as $item){
-                             ?>
-                             <li class="menu">
-                                <a href="<?=$item[$sluglang]?>" class="inherit-text" title="<?=$item["ten$lang"]?>">
-                                    <span class="mmtt"><?=$item["ten$lang"]?></span>
-                                </a>
-
-                                
-                            </li>
-                        <?php } ?>
-                    </ul>
-                <?php } ?>
-
-            </li>
-        <?php } ?>
-    </ul>
-<?php } ?>
-
-</li>
-
-<li class="menu <?php if($com=='dich-vu') echo 'active';?>">
-    <a href="dich-vu" class="inherit-text menu-a" title="DỊCH VỤ">
-        <span>DỊCH VỤ</span>
-    </a>
-    <?php if(!empty($index_dichvu_menu)){ ?>
-        <ul class="vertical-menu-content sub-nav-ul">
-            <?php foreach($index_dichvu_menu as $list){ ?>
-             <li class="menu">
-                <a href="<?=$list[$sluglang]?>" class="inherit-text" title="<?=$list["ten$lang"]?>">
-                    <span class="mmtt"><?=$list["ten$lang"]?></span>
-                </a>
-            </li>
-        <?php } ?>
-    </ul>
-<?php } ?>
+                </li>
+            <?php } ?>
+        </ul>
+    <?php } ?>
 
 </li>
 
@@ -132,53 +107,55 @@
 </ul>
 </div>
 </div>
+</div>
+
 
 
 <a href="#menu_repsonsive" class="menu_repsonsive"><span class="icon bar"></span></a>
 <div id="menu_repsonsive">
-        <ul>
-            <li>
-                <a href=""  title="TRANG CHỦ">
-                   <span>TRANG CHỦ</span>
-               </a>
-           </li>
-           <li>
-            <a href="gioi-thieu"  title="GIỚI THIỆU">
-               <span>GIỚI THIỆU</span>
+    <ul>
+        <li>
+            <a href=""  title="TRANG CHỦ">
+               <span>TRANG CHỦ</span>
            </a>
        </li>
        <li>
-        <a href="san-pham"  title="Sản Phẩm">
-            <span>SẢN PHẨM</span>
-        </a>
-        <?php if(!empty($index_product_list_menu)){ ?>
-            <ul>
-                <?php foreach($index_product_list_menu as $list){
+        <a href="gioi-thieu"  title="GIỚI THIỆU">
+           <span>GIỚI THIỆU</span>
+       </a>
+   </li>
+   <li>
+    <a href="san-pham"  title="Sản Phẩm">
+        <span>SẢN PHẨM</span>
+    </a>
+    <?php if(!empty($index_product_list_menu)){ ?>
+        <ul>
+            <?php foreach($index_product_list_menu as $list){
 
-                 $index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
-                 ?>
-                 <li>
-                    <a href="<?=$list[$sluglang]?>" title="<?=$list["ten$lang"]?>">
-                        <span ><?=$list["ten$lang"]?></span>
-                    </a>
-                    <?php if(!empty($index_dichvu_cat_item)){ ?>
-                        <ul>
-                            <?php foreach($index_dichvu_cat_item as $item){
-                             ?>
-                             <li>
-                                <a href="<?=$item[$sluglang]?>" title="<?=$item["ten$lang"]?>">
-                                    <span><?=$item["ten$lang"]?></span>
-                                </a>
+             $index_dichvu_cat_item= $d->rawQuery("select tenkhongdauvi,ten$lang,id,photo from #_product_cat where id_list = ? and hienthi=1  order by stt asc ",array($list['id']));
+             ?>
+             <li>
+                <a href="<?=$list[$sluglang]?>" title="<?=$list["ten$lang"]?>">
+                    <span ><?=$list["ten$lang"]?></span>
+                </a>
+                <?php if(!empty($index_dichvu_cat_item)){ ?>
+                    <ul>
+                        <?php foreach($index_dichvu_cat_item as $item){
+                         ?>
+                         <li>
+                            <a href="<?=$item[$sluglang]?>" title="<?=$item["ten$lang"]?>">
+                                <span><?=$item["ten$lang"]?></span>
+                            </a>
 
-                                
-                            </li>
-                        <?php } ?>
-                    </ul>
-                <?php } ?>
 
-            </li>
-        <?php } ?>
-    </ul>
+                        </li>
+                    <?php } ?>
+                </ul>
+            <?php } ?>
+
+        </li>
+    <?php } ?>
+</ul>
 <?php } ?>
 
 </li>

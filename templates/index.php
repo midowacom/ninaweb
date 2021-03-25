@@ -18,6 +18,7 @@
 
     ?>
     <?php include TEMPLATE.$template."_tpl.php";?>
+   
     <?php
     include TEMPLATE.LAYOUT."footer.php";
     include TEMPLATE.LAYOUT."js.php";

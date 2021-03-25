@@ -9,14 +9,8 @@ $func->checkUrl($config['website']['index']);
 $func->checkLogin();
 
 /* Mobile detect */
-$deviceType = null;
-if(isset($detect)){
-	$deviceType = ($detect->isMobile() || $detect->isTablet()) ? 'mobile' : 'computer';
-	if($deviceType == 'computer') define('TEMPLATE','./templates/');
-	else define('TEMPLATE','./templates-mobile/');
-}else{
-	define('TEMPLATE','./templates/');
-}
+
+define('TEMPLATE','./templates/');
 
 /* Watermark */
 $wtmPro = $d->rawQueryOne("select hienthi, photo, options from #_photo where type = ? and act = ? limit 0,1",array('watermark','photo_static'));
@@ -83,18 +77,15 @@ $optsetting = (isset($setting['options']) && $setting['options'] != '') ? json_d
 if(isset($match['params']['lang']) && $match['params']['lang'] != '') $_SESSION['lang'] = $match['params']['lang'];
 else if(!isset($_SESSION['lang']) && !isset($match['params']['lang'])) $_SESSION['lang'] = $optsetting['lang_default'];
 $lang = $_SESSION['lang'];
-
+$func->checkLang($lang,'en');
 /* Slug lang */
-$sluglang = 'tenkhongdauvi';
+$sluglang = 'tenkhongdau'.$lang;
 
 /* SEO Lang */
-$seolang = "vi";
+$seolang = $lang;
 
 /* Require datas */
 require_once LIBRARIES."lang/lang$lang.php";
-
-require_once LIBRARIES."lang/lang_login_$lang.php";
-
 require_once SOURCES."allpage.php";
 
 /* Tối ưu link */
@@ -185,7 +176,7 @@ switch($com)
 	$type = $com;
 	$title_crumb = tintuc;
 	break;
-case 'tieu-chi':
+	case 'tieu-chi':
 	$source = "news";
 	$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
 	$seo->setSeo('type',isset($_GET['id']) ? "article" : "object");
@@ -264,7 +255,7 @@ case 'tieu-chi':
 	$type = $com;
 	$title_crumb = "Chính Sách";
 	break;
-case 'cau-hoi':
+	case 'cau-hoi':
 	$source = "news";
 	$template = isset($_GET['id']) ? "news/news_detail" : "news/news";
 	$seo->setSeo('type','article');
@@ -327,7 +318,7 @@ case 'cau-hoi':
 	$title_crumb = "Bất Động Sản";
 	break;
 
-case 'nha-tro':
+	case 'nha-tro':
 	$source = "product";
 	$template = isset($_GET['id']) ? "product/product_detail" : "product/product";
 	$seo->setSeo('type',isset($_GET['id']) ? "article" : "object");

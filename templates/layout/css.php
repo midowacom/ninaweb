@@ -7,6 +7,7 @@ $css->setCss("./assets/addons/magiczoomplus/magiczoomplus.css");
 $css->setCss("./assets/addons/fotorama/fotorama.css");
 $css->setCss("./assets/addons/sweetalert2/sweetalert2.min.css");
 $css->setCss("./assets/addons/simplyscroll/jquery.simplyscroll.css");
+$css->setCss("./assets/css/uikit.css");
 echo $css->getCss();
 ?>
 <link rel="stylesheet" href="assets/css/style.css">

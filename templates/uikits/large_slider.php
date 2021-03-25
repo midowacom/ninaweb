@@ -1,6 +1,6 @@
 <?php
-$width=1366;//1440 - 17px
-$height =480;
+$width= 1440;
+$height= (int)((450/1366)*1440);
 $sliderzc = 1;
 $slider_indicators = false;
 $slider_pagination = false;

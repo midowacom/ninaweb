@@ -1,15 +1,12 @@
 #menu{
-    height: 50px;
     position: relative;
-    background: #eca41a;
     display: flex;
     align-items: center;
     z-index: 12;
     .slice{
-        display: block;
-        height: 19px;
-        width: 1px;
-        background: image("slice.png") center no-repeat;
+        // display: block;
+        // height: 19px;
+        // width: 1px;
     }
     .container{
         height: 100%;

@@ -5,16 +5,9 @@
 @import '../base/form';
 @import '../base/grid';
 @import '../base/base';
-$global-link-color: #DA7D02;
-
-
-@import "../uikit/variables-theme.scss";
-@import "../uikit/mixins-theme.scss";
-
-@import "uikit";
 
 /* Customize themes */
 @import "theme";
-
+@import "uikit-customize";
 /* Customize styles */
 @import "styles";

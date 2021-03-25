@@ -1,0 +1,19 @@
+/* Offcanvas Customize */
+$offcanvas-background: transparent;
+.offcanvas-wrapper{
+	position: relative;
+	height: 100%;
+	background: $offcanvas-background;
+	color: #333;
+	.offcanvas-header{
+		position: relative;
+		h3{
+			color: #000;
+			text-align: center;
+			font-size: 20px;
+			margin: 0;
+		}
+		padding: 5px 0;
+		border-bottom: 1px solid #999;
+	}
+}

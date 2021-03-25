@@ -197,7 +197,7 @@ define("tacphamnhathietke","Collections of Designer ");
 define("khuyenmai","SaleOff");
 define("thongtinnhom","Group Info");
 define("bandangthuocnhom","You're a member of group");
-define("muchietkhau","Mức chiết khấu");
+define("muchietkhau","Discount");
 define("no_color_choosen","Not choose color yet");
 define("no_size_choosen","not choose size yet");
 define("_not_enough_items","Not enough items");
