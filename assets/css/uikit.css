@@ -736,7 +736,7 @@ select.uk-form-width-xsmall { width: 75px; }
 /* Success */
 .uk-alert-success { background: #edfbf6; color: #32d296; }
 /* Warning */
-.uk-alert-warning { background: #fef5ee; color: #faa05a; }
+.uk-alert-warning {background: #fef5ee;color: #803a04;}
 /* Danger */
 .uk-alert-danger { background: #fef4f6; color: #f0506e; }
 /* ======================================================================== Component: Placeholder ========================================================================== */
@@ -923,7 +923,7 @@ select.uk-form-width-xsmall { width: 75px; }
 .uk-modal-page { overflow: hidden; }
 /* Dialog ========================================================================== */
 /* 1. Create position context for spinner and close button 2. Dimensions 3. Fix `max-width: 100%` not working in combination with flex and responsive images in IE11 `!important` needed to overwrite `uk-width-auto`. See `#modal-media-image` in tests 4. Style 5. Slide-in transition */
-.uk-modal-dialog { /* 1 */ position: relative; /* 2 */ box-sizing: border-box; margin: 0 auto; width: 600px; /* 3 */ max-width: calc(100% - 0.01px) !important; /* 4 */ background: #fff; /* 5 */ opacity: 0; transform: translateY(-100px); transition: 0.3s linear; transition-property: opacity, transform; }
+.uk-modal-dialog { /* 1 */position: relative; /* 2 */box-sizing: border-box;margin: 0 auto;width: 600px; /* 3 */max-width: calc(100% - 0.01px) !important; /* 4 */background: #fff; /* 5 */opacity: 0;transform: translateY(-100px);transition: 0.3s linear;transition-property: opacity, transform;}
 /* Open */
 .uk-open > .uk-modal-dialog { opacity: 1; transform: translateY(0); }
 /* Size modifier ========================================================================== */
@@ -978,10 +978,10 @@ select.uk-form-width-xsmall { width: 75px; }
 .uk-slider-container-offset { margin: -11px -25px -39px -25px; padding: 11px 25px 39px 25px; }
 /* Items ========================================================================== */
 /* 1. Optimize animation 2. Create a containing block. In Safari it's neither created by `transform` nor `will-change`. */
-.uk-slider-items { /* 1 */ will-change: transform; /* 2 */ position: relative; }
+.uk-slider-items { /* 1 */will-change: transform; /* 2 */position: relative;display: flex;padding: 0;}
 /* 1. Reset list style without interfering with grid 2. Prevent displaying the callout information on iOS. */
 .uk-slider-items:not(.uk-grid) { display: flex; /* 1 */ margin: 0; padding: 0; list-style: none; /* 2 */ -webkit-touch-callout: none; }
-.uk-slider-items.uk-grid { flex-wrap: nowrap; }
+.uk-slider-items.uk-grid {/* flex-wrap: nowrap; */}
 /* Item ========================================================================== */
 /* 1. Let items take content dimensions (0 0 auto) 2. Create position context 3. Disable horizontal panning gestures in IE11 and Edge 4. Suppress outline on focus */
 .uk-slider-items > * { /* 1 */ flex: none; /* 2 */ position: relative; /* 3 */ touch-action: pan-y; }

@@ -29,8 +29,8 @@
                 <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
             </div>
             <div class="uk-margin">
-                 <input type="submit" name="submit-contact" value="<?=gui?>" disabled />
-            <input type="reset"value="<?=nhaplai?>" />
+                 <input type="submit" class="uk-button uk-button-danger" name="submit-contact" value="<?=gui?>" />
+            <input type="reset"value="<?=nhaplai?>" class="uk-button uk-button-dark"/>
             </div>
            
             <input type="hidden" name="recaptcha_response_contact" id="recaptchaResponseContact">

@@ -4,7 +4,7 @@
   <?php include TEMPLATE.LAYOUT."head.php"; ?>
   <?php include TEMPLATE.LAYOUT."css.php"; ?>
 </head>
-<body <?php echo "class='page-".str_replace(array('/','\\'), '-', $template)."'"; ?>> 
+<body class="<?=$source?>"> 
   <div id="body-wrapper" class="<?=$com?>">
     <?php 
     include TEMPLATE.LAYOUT."seo.php";
@@ -23,6 +23,7 @@
     include TEMPLATE.LAYOUT."footer.php";
     include TEMPLATE.LAYOUT."js.php";
     include TEMPLATE.LAYOUT."modal.php";
+    include TEMPLATE."uikits/uk_modal.php";
         // if($deviceType=='mobile') include TEMPLATE.LAYOUT."phone.php";
     ?>
   </div>

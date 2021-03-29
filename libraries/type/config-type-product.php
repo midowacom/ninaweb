@@ -8,11 +8,11 @@
     $config['product'][$nametype]['item'] = false;
     $config['product'][$nametype]['sub'] = false;
     $config['product'][$nametype]['brand'] = false;
-    $config['product'][$nametype]['mau'] = true;
-    $config['product'][$nametype]['size'] = true;
+    $config['product'][$nametype]['mau'] = false;
+    $config['product'][$nametype]['size'] = false;
     $config['product'][$nametype]['price'] = false;
     $config['product'][$nametype]['statistics'] = false;
-    $config['product'][$nametype]['quanprice'] = true;
+    $config['product'][$nametype]['quanprice'] = false;
     $config['product'][$nametype]['quanprice_fromto'] = false;
     $config['product'][$nametype]['tags'] = false;
     $config['product'][$nametype]['import'] = false;
@@ -21,19 +21,19 @@
     $config['product'][$nametype]['copy'] = true;
     $config['product'][$nametype]['copy_image'] = true;
     $config['product'][$nametype]['slug'] = true;
-    $config['product'][$nametype]['check'] = array("noibat" => "Nổi bật","noibat1" => "Bán chạy","noibat2" => "Mới");
+    $config['product'][$nametype]['check'] = array("noibat" => "Nổi bật");
     $config['product'][$nametype]['images'] = true;
     $config['product'][$nametype]['title_photo'] = "Sản phẩm";
     $config['product'][$nametype]['photo2'] = false;
     $config['product'][$nametype]['title_photo2'] = "Mặt sau";
     $config['product'][$nametype]['show_images'] = true;
-    $config['product'][$nametype]['sub_gallery'] = true;
+    $config['product'][$nametype]['sub_gallery'] = false;
     $config['product'][$nametype]['ma'] = true;
     $config['product'][$nametype]['gia'] = true;
-    $config['product'][$nametype]['giacu'] = true;
+    $config['product'][$nametype]['giacu'] = false;
     $config['product'][$nametype]['giakm'] = false;
-    $config['product'][$nametype]['mota'] = true;
-    $config['product'][$nametype]['mota_cke'] = true;
+    $config['product'][$nametype]['mota'] = false;
+    $config['product'][$nametype]['mota_cke'] = false;
     $config['product'][$nametype]['noidung'] = true;
     $config['product'][$nametype]['noidung_cke'] = true;
     $config['product'][$nametype]['seo'] = true;
@@ -176,5 +176,35 @@
     $config['product'][$nametype]['img_type_brand'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
 
 
+    $nametype = "gallery";
+    $config['product'][$nametype]['title_main'] = "Gallery";
+    $config['product'][$nametype]['check'] = array();
+    $config['product'][$nametype]['view'] = true;
+    $config['product'][$nametype]['slug'] = true;
+    $config['product'][$nametype]['images'] = true;
+    $config['product'][$nametype]['show_images'] = true;
+    $config['product'][$nametype]['copy'] = true;
+    $config['product'][$nametype]['copy_image'] = true;
+    $config['product'][$nametype]['gallery'] = array
+    (
+        $nametype => array
+        (
+            "title_main_photo" => "Hình ảnh thư viện ảnh",
+            "title_sub_photo" => "Hình ảnh",
+            "number_photo" => 2,
+            "images_photo" => true,
+            "avatar_photo" => true,
+            "tieude_photo" => true,
+            "width_photo" => 540,
+            "height_photo" => 540,
+            "thumb_photo" => '100x100x1',
+            "img_type_photo" => '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF'
+        )
+    );
+    $config['product'][$nametype]['seo'] = true;
+    $config['product'][$nametype]['width'] = 270;
+    $config['product'][$nametype]['height'] = 270;
+    $config['product'][$nametype]['thumb'] = '100x100x1';
+    $config['product'][$nametype]['img_type'] = '.jpg|.gif|.png|.jpeg|.gif|.JPG|.PNG|.JPEG|.Png|.GIF';
     
 ?>

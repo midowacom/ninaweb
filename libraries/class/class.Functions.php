@@ -1921,7 +1921,7 @@ class Functions
 					</div>
 				</div>
 			<?php }
-			public function get_product_item($item){
+			public function get_product_item_aka($item){
 				global $sluglang,$lang,$all_colors,$d;
 				$data_photo2 = '';
 				$pic = $d->rawQueryOne("select count(id) as c from #_product_quanprice where id_product=? ",array($item['id']));
@@ -1929,7 +1929,7 @@ class Functions
 					$data_photo2 = THUMBS.'/280x230x1/'.UPLOAD_PRODUCT_L.$item['photo2'];
 				}
 				?>
-				<div class="product-item default-hover " id="product-item-<?=$item["id"]?>">
+				<div data-id="<?=$item["id"]?>"  class="product-item default-hover uikit-product-modal" id="product-item-<?=$item["id"]?>">
 					<div class="product-item__image image" data-src='<?=$data_photo2?>'>
 						<a class="text-decoration-none" href="<?=$item[$sluglang]?>" title="<?=$item['ten'.$lang]?>">
 							<img onerror="this.src='<?=THUMBS?>/280x230x1/assets/images/noimage.png';" src="<?=THUMBS?>/280x230x2/<?=UPLOAD_PRODUCT_L.$item['photo']?>" alt="<?=$item['ten'.$lang]?>" class="img-fluid w-100"/>
@@ -1943,7 +1943,43 @@ class Functions
 					</div>
 				</div>
 			<?php }
+			public function get_product_item($item){
+				global $sluglang,$lang,$all_colors,$d;
+				$data_photo2 = '';
+				$pic = $d->rawQueryOne("select count(id) as c from #_product_quanprice where id_product=? ",array($item['id']));
+				if(!empty($item['photo2'])){ 
+					$data_photo2 = THUMBS.'/280x230x1/'.UPLOAD_PRODUCT_L.$item['photo2'];
+				}
+				?>
+				<a data-src="#product-item-<?=$item["id"]?>" data-fancybox="video">
+					<div data-id="<?=$item["id"]?>" class="product-item default-hover" >
+						<div class="product-item__image image" data-src='<?=$data_photo2?>'>
 
+							<img onerror="this.src='<?=THUMBS?>/280x230x1/assets/images/noimage.png';" src="<?=THUMBS?>/280x230x2/<?=UPLOAD_PRODUCT_L.$item['photo']?>" alt="<?=$item['ten'.$lang]?>" class="img-fluid w-100"/>
+						</div>
+						<div class="product-item__detail detail">
+							<h3 class="title-product line-limit to-2">
+								<?=$item['ten'.$lang]?>
+							</h3>
+						</div>
+
+						<div  id="product-item-<?=$item["id"]?>" class="aka-product">
+							<div class="hidden-product-item">
+								<div class="image">
+									<img onerror="this.src='<?=THUMBS?>/640x480x1/assets/images/noimage.png';" src="<?=THUMBS?>/640x480x2/<?=UPLOAD_PRODUCT_L.$item['photo']?>" alt="<?=$item['ten'.$lang]?>" class="img-fluid w-100"/>
+								</div>
+								<div class="detail">
+									<h3><?=$item["ten$lang"]?></h3>
+									<hr>
+									<div class="content">
+										<?=htmlspecialchars_decode($item["noidung$lang"])?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			<?php }
 			public function get_mxh($social,$w=40,$h=40){
 				global $config_base;
 				$socialString='';
@@ -1970,13 +2006,13 @@ class Functions
 			public function get_product_tpl($product,$type='san-pham'){
 				global $sluglang,$lang;
 				?>
-					<div class="row product-row">
-						<?php foreach($product as $item2){ ?>
-							<div class="col-lg-3 col-md-4 col-sm-6 col-6">
-								<?=$this->get_product_item_by_type($item2,$type);?>
-							</div>
-						<?php } ?>
-					</div>
+				<div class="row product-row">
+					<?php foreach($product as $item2){ ?>
+						<div class="col-lg-3 col-md-4 col-sm-6 col-6">
+							<?=$this->get_product_item_by_type($item2,$type);?>
+						</div>
+					<?php } ?>
+				</div>
 			<?php }
 
 			public function get_product_tpl_mobile($product){

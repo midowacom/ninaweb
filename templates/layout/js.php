@@ -32,6 +32,7 @@ echo $js->getJs();
 <script src="assets/addons/uikit/js/uikit-icons.min.js"></script>
 <script src="assets/js/functions.js"></script>
 <script src="assets/js/cart.js"></script>
+<script src="assets/js/uikits.js"></script>
 <script src="assets/js/apps.js"></script>
 
 

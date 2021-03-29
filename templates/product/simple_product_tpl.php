@@ -7,8 +7,8 @@
         <?php if(isset($product) && count($product) > 0) { ?>
                 <?=$func->get_product_tpl($product,$com)?>
         <?php } else { ?>
-            <div class="alert alert-warning" role="alert">
-                <strong><?=khongtimthayketqua?></strong>
+            <div class="uk-alert-warning uk-margin uk-panel" uk-alert>
+                <div><?=khongtimthayketqua?></div>
             </div>
         <?php } ?>
         <div class="clear"></div>

@@ -8,31 +8,30 @@
     require_once LIBRARIES.'type/config-type-product.php';
 
     /* Config type - Tags */
-    require_once LIBRARIES.'type/config-type-tags.php';
+    // require_once LIBRARIES.'type/config-type-tags.php';
 
     /* Config type - Newsletter */
-    require_once LIBRARIES.'type/config-type-newsletter.php';
+    // require_once LIBRARIES.'type/config-type-newsletter.php';
 
     /* Config type - News */
-    require_once LIBRARIES.'type/config-type-news.php';
+    // require_once LIBRARIES.'type/config-type-news.php';
 
     /* Config type - Static */
     require_once LIBRARIES.'type/config-type-static.php';
 
     /* Config type - Photo */
     require_once LIBRARIES.'type/config-type-photo.php';
-    include __DIR__."/type/config-sub-module.php";
     /* Seo page */
    
     $config['seopage']['page'] = array(
-        "san-pham" => "Sản phẩm",
-        "tin-tuc" => "Tin tức",
-        "dich-vu" => "Dịch Vụ",
-        "bang-gia" => "Bảng Giá",
+        "product" => "Product",
+        // "tin-tuc" => "Tin tức",
+        // "dich-vu" => "Dịch Vụ",
+        // "bang-gia" => "Bảng Giá",
         // "tuyen-dung" => "Tuyển dụng",
         // "thu-vien-anh" => "Thư viện ảnh",
         // "video" => "Video",
-        "lien-he" => "Liên hệ"
+        "contact" => "Contact"
     );
     $config['seopage']['width'] = 300;
     $config['seopage']['height'] = 200;
@@ -58,7 +57,7 @@
 
     /* Quản lý export */
     $config['export']['category'] = false;
-    $config['shownews'] = true;
+    $config['shownews'] = false;
     /* Quản lý phân quyền */
     // $config['permission'] = true;
 

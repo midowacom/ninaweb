@@ -95,23 +95,9 @@ $requick = array(
 	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"product","type"=>"san-pham"),
 	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"product","type"=>"san-pham",'menu'=>true),
 
-	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"nong-san","type"=>"nong-san"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"nong-san","type"=>"nong-san",'menu'=>true),
+	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"gallery","type"=>"gallery",'menu'=>true),
 
-	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"bat-dong-san","type"=>"bat-dong-san"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"bat-dong-san","type"=>"bat-dong-san",'menu'=>true),
-
-	array("tbl"=>"product_list","field"=>"idl","source"=>"product","com"=>"nha-tro","type"=>"nha-tro"),
-	array("tbl"=>"product","field"=>"id","source"=>"product","com"=>"nha-tro","type"=>"nha-tro",'menu'=>true),
-
-	array("tbl"=>"news_list","field"=>"idl","source"=>"news","com"=>"dich-vu","type"=>"dich-vu"),
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"dich-vu","type"=>"dich-vu",'menu'=>true),
-
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"tin-tuc","type"=>"tin-tuc",'menu'=>true),
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"tieu-chi","type"=>"tieu-chi",'menu'=>true),
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"chinh-sach","type"=>"chinh-sach",'menu'=>true),
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"cau-hoi","type"=>"cau-hoi",'menu'=>true),
-	array("tbl"=>"news","field"=>"id","source"=>"news","com"=>"cong-trinh","type"=>"cong-trinh",'menu'=>true),
+	
 );
 
 $tenkhongdau = "";
@@ -361,12 +347,12 @@ switch($com)
 	$title_crumb = null;
 	break;
 
-	case 'thu-vien-anh':
+	case 'gallery':
 	$source = "product";
 	$template = isset($_GET['id']) ? "album/album_detail" : "album/album";
 	$seo->setSeo('type',isset($_GET['id']) ? "article" : "object");
 	$type = $com;
-	$title_crumb = thuvienanh;
+	$title_crumb = "Gallery";
 	break;
 
 	case 'video':
