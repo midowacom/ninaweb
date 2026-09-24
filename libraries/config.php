@@ -32,7 +32,7 @@
 			'charset' => 'utf8'
 		),
 		'website' => array(
-			'error-reporting' => false,
+			'error-reporting' => true,
 			'secret' => '$nina@',
 			'salt' => 'swKJjeS!t',
 			'debug-developer' => true,
